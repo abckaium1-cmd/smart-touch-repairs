@@ -1,0 +1,3228 @@
+<!doctype html>
+<html lang="en-GB" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#201E1C" />
+  <meta name="description" content="Mobile scratch, scuff, dent and paint repairs across Birmingham, Solihull and surrounding areas. Call Smart Touch on 07496 005074 or get your fast-track repair quote online." />
+  <meta property="og:title" content="Smart Touch | Mobile Car Body Repairs in Birmingham &amp; Solihull" />
+  <meta property="og:description" content="Scratch, scuff, dent and localised paint repairs at your home or workplace across Birmingham and Solihull. Digital colour matching with specialist spectrum reader." />
+  <meta property="og:type" content="website" />
+  <title>Smart Touch | Mobile Car Body Repairs in Birmingham &amp; Solihull</title>
+
+  <link rel="icon" type="image/webp" href="assets/design/smart-touch-logo.webp" />
+
+  <!-- Fontshare Fonts CDN (as specified in design.md) -->
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@300,500,600&amp;display=swap" rel="stylesheet" />
+  <link href="https://api.fontshare.com/v2/css?f[]=supreme@400,500&amp;display=swap" rel="stylesheet" />
+  <link href="https://api.fontshare.com/v2/css?f[]=tanker@400&amp;display=swap" rel="stylesheet" />
+  <link href="https://api.fontshare.com/v2/css?f[]=archivo@500,600&amp;display=swap" rel="stylesheet" />
+
+  <!-- Local WOFF2 Fallback (@font-face) for Offline Compatibility -->
+  <style>
+        @font-face { font-family: 'General Sans'; src: url('assets/design/fonts/general-sans-300.woff2') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'General Sans'; src: url('assets/design/fonts/general-sans-500.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'General Sans'; src: url('assets/design/fonts/general-sans-600.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Supreme'; src: url('assets/design/fonts/supreme-400.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Supreme'; src: url('assets/design/fonts/supreme-500.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Tanker'; src: url('assets/design/fonts/tanker-400.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Archivo'; src: url('assets/design/fonts/archivo-500.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'Archivo'; src: url('assets/design/fonts/archivo-600.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+  </style>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#201E1C',
+              surface: '#302C29',
+              card: '#2B2927',
+              primary: '#D52326',
+              primaryHover: '#B51D26',
+              primaryActive: '#921B24',
+              secondary: '#E6D9C5',
+              secondaryHover: '#D9C7AD',
+              text: '#FFFCF6',
+              muted: '#E6D9C5',
+              border: '#594A3D',
+              borderStrong: '#766149',
+              ink: '#302A24',
+              inkMuted: '#594532',
+              panel: '#FFFCF6',
+              shadow: '#181614',
+            }
+          },
+          fontFamily: {
+            headline: ['"General Sans"', 'sans-serif'],
+            display: ['"Tanker"', 'sans-serif'],
+            body: ['"Supreme"', 'sans-serif'],
+            ui: ['"Archivo"', 'sans-serif'],
+          },
+          boxShadow: {
+            subtle: '0 2px 0 0 #181614',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Exact Solid Hex Design System (design.md & sitemap.md) - No alpha, no blur, no gradients */
+    :root {
+      --color-primary: #D52326;
+      --color-primary-hover: #B51D26;
+      --color-primary-active: #921B24;
+      --color-secondary: #E6D9C5;
+      --color-bg: #201E1C;
+      --color-surface: #302C29;
+      --color-card: #2B2927;
+      --color-text: #FFFCF6;
+      --color-text-muted: #E6D9C5;
+      --color-border: #594A3D;
+      --color-ink: #302A24;
+      --color-panel: #FFFCF6;
+      --shadow-subtle: 0 2px 0 0 #181614;
+    }
+
+    html {
+      overflow-x: hidden;
+      max-width: 100vw;
+      font-synthesis: none;
+      scroll-padding-top: 100px;
+    }
+    body {
+      background-color: #201E1C;
+      color: #FFFCF6;
+      font-family: 'Supreme', sans-serif;
+      overflow-x: hidden;
+      max-width: 100vw;
+      width: 100%;
+    }
+    h1, h2, h3, .font-headline {
+      font-family: 'General Sans', sans-serif;
+    }
+    .font-display, .font-tanker {
+      font-family: 'Tanker', sans-serif !important;
+    }
+    button, input, select, textarea, nav a, .font-ui {
+      font-family: 'Archivo', sans-serif;
+    }
+
+    /* 2-Layer Review Showcase (Continuous Autoplay Marquee, Pause on Hover) */
+    @keyframes marqueeLeft {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    @keyframes marqueeRight {
+      0% { transform: translateX(-50%); }
+      100% { transform: translateX(0%); }
+    }
+    .marquee-track-left {
+      display: flex;
+      width: max-content;
+      animation: marqueeLeft 18s linear infinite;
+    }
+    .marquee-track-right {
+      display: flex;
+      width: max-content;
+      animation: marqueeRight 18s linear infinite;
+    }
+    .marquee-pause:hover .marquee-track-left,
+    .marquee-pause:hover .marquee-track-right,
+    .marquee-pause:active .marquee-track-left,
+    .marquee-pause:active .marquee-track-right {
+      animation-play-state: paused;
+    }
+
+    /* Mobile Carousel Clean Scrollbar Hide */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Skip link for a11y */
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 16px;
+      background: #D52326;
+      color: #FFFFFF;
+      padding: 8px 16px;
+      z-index: 100;
+      font-weight: bold;
+      border-radius: 4px;
+      transition: top 0.2s;
+    }
+    .skip-link:focus {
+      top: 16px;
+    }
+
+    /* Modal Backdrop solid dark */
+    dialog::backdrop {
+      background-color: #181614;
+    }
+
+    /* Interactive Before & After Comparison Slider Styles */
+    .comparison-slider-container {
+      --pos: 50%;
+    }
+    .comparison-before-layer {
+      clip-path: inset(0 calc(100% - var(--pos, 50%)) 0 0);
+    }
+    .comparison-divider-line {
+      left: var(--pos, 50%);
+    }
+  </style>
+</head>
+<body class="bg-[#201E1C] text-[#FFFCF6] antialiased selection:bg-[#D52326] selection:text-white">
+
+  <a class="skip-link font-ui" href="#main">Skip to main content</a>
+
+  <!-- =========================================================
+       SECTION 1: STICKY NAVIGATION HEADER (Logo Only, Extra Big, No Title)
+  ========================================================== -->
+  <header class="sticky top-0 w-full bg-[#181614] z-30 shadow-subtle">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16 pt-7 sm:pt-8 lg:pt-10 pb-3.5 sm:pb-4 lg:pb-4 flex items-center justify-between">
+      
+      <!-- Left: Sleek Authentic Smart Touch Logo (Only Logo, Perfectly Proportioned) -->
+      <a href="#top" class="flex items-center group py-0.5" aria-label="Smart Touch Home">
+        <img 
+          src="assets/design/smart-touch-logo-cropped.webp" 
+          alt="Smart Touch - Smart Repairs" 
+          width="240"
+          height="123"
+          class="h-10 sm:h-12 md:h-13 lg:h-13 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
+        />
+      </a>
+
+      <!-- Center: Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-8 font-ui font-semibold text-sm uppercase tracking-wider text-[#FFFCF6]" aria-label="Main Navigation">
+        <a href="#repairs" class="hover:text-[#D52326] transition duration-150 py-1">Repairs</a>
+        <a href="#why-choose" class="hover:text-[#D52326] transition duration-150 py-1">Why Us</a>
+        <a href="#gallery" class="hover:text-[#D52326] transition duration-150 py-1">Our Work</a>
+        <a href="#reviews" class="hover:text-[#D52326] transition duration-150 py-1">Reviews</a>
+        <a href="#faq" class="hover:text-[#D52326] transition duration-150 py-1">FAQ</a>
+      </nav>
+
+      <!-- Right: Primary Call Action (Desktop) & Mobile Call / Hamburger -->
+      <div class="flex items-center gap-3">
+        <!-- Desktop Call Button -->
+        <a 
+          href="tel:+447496005074" 
+          class="hidden sm:inline-flex items-center gap-2 bg-[#D52326] hover:bg-[#B51D26] active:bg-[#921B24] text-white px-5 sm:px-6 py-3 rounded-[4px] font-ui font-bold text-xs sm:text-sm uppercase tracking-wider transition duration-150 shadow-subtle"
+        >
+          <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1c-9.39 0-17-7.61-17-17a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.21 2.2z"/>
+          </svg>
+          <span>Call 07496 005074</span>
+        </a>
+
+        <!-- Mobile Quick Call Pill -->
+        <a 
+          href="tel:+447496005074" 
+          class="inline-flex sm:hidden items-center gap-1.5 bg-[#D52326] hover:bg-[#B51D26] text-white px-3 py-2 rounded-[4px] font-ui font-bold text-xs uppercase tracking-wider transition"
+          aria-label="Call Smart Touch"
+        >
+          <svg class="w-3.5 h-3.5 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1c-9.39 0-17-7.61-17-17a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.21 2.2z"/>
+          </svg>
+          <span>Call Now</span>
+        </a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button 
+          type="button" 
+          id="menuToggle" 
+          onclick="toggleMobileMenu()" 
+          class="lg:hidden p-2 text-[#FFFCF6] hover:text-[#D52326] focus:outline-none focus:ring-2 focus:ring-[#D52326] rounded-[4px]"
+          aria-expanded="false" 
+          aria-controls="mobileMenu"
+          aria-label="Toggle Navigation Menu"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path id="hamburgerIcon" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden max-w-[1440px] mx-auto px-4 sm:px-8 py-4 bg-[#302C29] border-t border-[#594A3D] space-y-3 font-ui">
+      <a href="#repairs" onclick="toggleMobileMenu()" class="block text-[#FFFCF6] hover:text-[#D52326] font-semibold text-base py-1.5 uppercase tracking-wide">Repairs</a>
+      <a href="#why-choose" onclick="toggleMobileMenu()" class="block text-[#FFFCF6] hover:text-[#D52326] font-semibold text-base py-1.5 uppercase tracking-wide">Why Us</a>
+      <a href="#gallery" onclick="toggleMobileMenu()" class="block text-[#FFFCF6] hover:text-[#D52326] font-semibold text-base py-1.5 uppercase tracking-wide">Our Work</a>
+      <a href="#reviews" onclick="toggleMobileMenu()" class="block text-[#FFFCF6] hover:text-[#D52326] font-semibold text-base py-1.5 uppercase tracking-wide">Reviews</a>
+      <a href="#quote" onclick="toggleMobileMenu()" class="block text-[#D52326] font-bold text-base py-1.5 uppercase tracking-wide">Get Your Quote</a>
+      <a href="#faq" onclick="toggleMobileMenu()" class="block text-[#FFFCF6] hover:text-[#D52326] font-semibold text-base py-1.5 uppercase tracking-wide">FAQ</a>
+      <div class="pt-2">
+        <a href="tel:+447496005074" class="block w-full text-center bg-[#D52326] hover:bg-[#B51D26] text-white py-3 rounded-[4px] font-ui font-bold text-sm uppercase tracking-wider transition shadow-subtle">
+          Call Smart Touch (07496 005074)
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- =========================================================
+         SECTION 2: HERO SECTION (First Full Viewport, Centered Showcase Image, Zero Cropping)
+    ========================================================== -->
+    <div class="relative w-full bg-[#181614] flex flex-col justify-start items-center overflow-hidden">
+      
+      <div class="w-full max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-8 xl:px-12 pt-3 sm:pt-4 md:pt-5 lg:pt-6 flex flex-col items-center text-center z-10">
+
+        <!-- EXACT BILLBOARD HEADLINE: Mobile 3-Line High-Impact | Desktop 2-Line Billboard -->
+        <h1 class="w-full font-headline font-bold text-[30px] min-[360px]:text-[33px] min-[390px]:text-[36px] min-[420px]:text-[39px] sm:text-4xl md:text-5xl lg:text-[66px] xl:text-[76px] 2xl:text-[82px] tracking-tight uppercase leading-[1.08] sm:leading-[1.05] text-center max-w-6xl mx-auto">
+          <span class="text-[#FFFCF6]">
+            <span class="block sm:inline">MOBILE CAR</span>
+            <span class="block sm:inline sm:ml-2 sm:whitespace-nowrap">BODY REPAIRS</span>
+          </span>
+          <span class="block text-[#D52326] mt-1 sm:mt-2 sm:whitespace-nowrap">AT YOUR DOOR</span>
+        </h1>
+
+        <!-- Supporting Value Proposition -->
+        <p class="text-[#E6D9C5] text-xs sm:text-sm md:text-base max-w-xl mx-auto leading-relaxed mt-2 sm:mt-2.5 font-body">
+          Scratch, scuff, dent and localised paint repairs across Birmingham, Solihull and surrounding areas. We come to your location with specialist colour-matching equipment.
+        </p>
+
+        <!-- EXPANDED DUAL-ACTION BUTTON WIDGET (Compact & Elevated) -->
+        <div class="mt-4 sm:mt-5 w-full max-w-xl mx-auto px-2">
+          <div class="border-2 border-dashed border-[#594A3D] bg-[#201E1C] rounded-[8px] p-2.5 sm:p-3 flex flex-col sm:flex-row items-center justify-between gap-2.5 sm:gap-4 shadow-subtle">
+            
+            <!-- Left: Primary Action Button -->
+            <a 
+              href="#quote" 
+              class="w-full sm:w-auto bg-[#D52326] hover:bg-[#B51D26] active:bg-[#921B24] text-white font-ui font-bold text-sm sm:text-base uppercase tracking-wider px-6 sm:px-8 py-2.5 sm:py-3.5 min-h-[46px] sm:min-h-[50px] rounded-[4px] transition shrink-0 flex items-center justify-center text-center shadow-subtle"
+            >
+              GET YOUR QUOTE
+            </a>
+
+            <!-- Middle: Vertical Separator with "or" -->
+            <div class="hidden sm:flex flex-col items-center justify-center text-xs font-ui font-bold text-[#E6D9C5] uppercase px-1 shrink-0">
+              <div class="h-3 w-px bg-[#594A3D]"></div>
+              <span class="py-0.5 text-[#E6D9C5]">or</span>
+              <div class="h-3 w-px bg-[#594A3D]"></div>
+            </div>
+
+            <!-- Mobile Divider -->
+            <div class="sm:hidden text-xs font-ui font-bold text-[#E6D9C5] uppercase tracking-wider my-0.5">
+              — OR —
+            </div>
+
+            <!-- Right: Direct Phone Quote Action -->
+            <a 
+              href="tel:+447496005074" 
+              class="w-full sm:w-auto bg-transparent hover:bg-[#201E1C] rounded-[4px] px-3 sm:px-5 py-1.5 sm:py-2 flex flex-col items-center sm:items-start transition group shrink-0"
+              aria-label="Direct Phone Quote: 07496 005074"
+            >
+              <span class="text-[10px] sm:text-[11px] font-ui font-bold uppercase tracking-widest text-[#E6D9C5] whitespace-nowrap">
+                DIRECT PHONE QUOTE
+              </span>
+              <span class="font-headline font-bold text-lg sm:text-xl text-[#FFFCF6] group-hover:text-[#D52326] tracking-tight transition whitespace-nowrap">
+                07496 005074
+              </span>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CENTER-ALIGNED FULL SHOWCASE HERO IMAGE (Increased Width, Zero Cropping, 100% Unclipped) -->
+      <div class="w-full max-w-[1400px] mx-auto mt-4 sm:mt-6 px-3 sm:px-6 lg:px-8 pb-8 sm:pb-12 flex justify-center items-center">
+        <img 
+          src="assets/images/smart-touch-technician-hero.webp" 
+          alt="Smart Touch professional mobile car body repair technician with branded service workshop van" 
+          class="w-full max-w-[1400px] h-auto object-contain rounded-[8px] sm:rounded-[14px] shadow-2xl select-none mx-auto block"
+          loading="eager"
+          decoding="async"
+        />
+      </div>
+
+    </div>
+
+    <!-- =========================================================
+         SECTION 3: REPAIR CAPABILITIES (PRD.md Section 7.4)
+         - 100% Solid HEX tokens strictly from design.md:
+           #201E1C (Canvas), #181614 (Dark Card Surface), #594A3D (Bronze Border)
+           #766149 (Border Strong Hover), #FFFCF6 (Porcelain Text), #E6D9C5 (Linen Text), #D52326 (Primary Red)
+         - Distinct dark card surface with crisp architectural borders & shadow-subtle
+    ========================================================== -->
+    <section id="repairs" class="relative w-full py-16 sm:py-24 bg-[#201E1C] overflow-hidden">
+      
+      <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header (Strictly ZERO Eyebrows) -->
+        <div class="text-center max-w-5xl xl:max-w-6xl mx-auto mb-12 sm:mb-16">
+          <h2 class="font-display font-normal text-[40px] min-[360px]:text-[48px] min-[400px]:text-[56px] sm:text-5xl md:text-6xl lg:text-[66px] xl:text-[76px] 2xl:text-[84px] text-[#FFFCF6] tracking-wider uppercase leading-none text-center">
+            <span class="block sm:inline text-[#FFFCF6] sm:whitespace-nowrap">VEHICLE REPAIR</span> <span class="block sm:inline text-[#D52326] mt-1 sm:mt-0 sm:whitespace-nowrap">CAPABILITIES</span>
+          </h2>
+          <p class="mt-4 sm:mt-5 text-xs sm:text-sm md:text-base text-[#E6D9C5] font-body leading-relaxed max-w-[540px] mx-auto px-6 sm:px-10 text-center">
+            Specialist mobile repair services brought directly to your<br class="hidden sm:inline">
+            driveway or workplace across Birmingham and Solihull. No<br class="hidden sm:inline">
+            leaving your car at a bodyshop for days.
+          </p>
+        </div>
+
+        <!-- MOBILE ONLY: 1-CARD SNAPPING CAROUSEL (Flush Full-Width Images, Defined Dark Cards) -->
+        <div class="block md:hidden w-full relative mb-10">
+          <div id="courseMobileSlider" class="w-full flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar gap-4 pb-2">
+            
+            <!-- Slide 1: Scratch & Scuff Repair -->
+            <div class="w-full shrink-0 snap-center min-w-full bg-[#181614] border border-[#594A3D] rounded-[8px] overflow-hidden flex flex-col justify-between shadow-subtle">
+              <div class="w-full aspect-[16/10] overflow-hidden bg-[#201E1C] border-b border-[#302C29]">
+                <img 
+                  src="assets/images/scratch-repair.webp" 
+                  alt="Scratch and scuff repair before assessment" 
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="p-6 pb-8 flex-1 flex flex-col justify-between text-center">
+                <div>
+                  <h3 class="font-display font-normal text-2xl sm:text-[26px] text-[#FFFCF6] uppercase leading-tight tracking-wide mb-3">
+                    SCRATCH &amp; SCUFF REPAIR
+                  </h3>
+                  <p class="text-xs text-[#E6D9C5] font-body leading-relaxed mb-6">
+                    Vandal scratches, key marks, panel scrapes and clear-coat abrasions restored on site. We prep, prime, color-match, and bake the finish on your driveway.
+                  </p>
+                </div>
+                <div class="flex justify-center mt-auto pt-2">
+                  <a href="#quote" onclick="selectDamageType('Scratch & scuff')" class="w-full max-w-[220px] bg-[#D52326] hover:bg-[#B51D26] text-white font-ui font-bold text-xs uppercase tracking-widest py-3.5 px-6 rounded-[4px] transition shadow-subtle text-center">
+                    GET A QUOTE
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2: Dent & Minor Panel Repair -->
+            <div class="w-full shrink-0 snap-center min-w-full bg-[#181614] border border-[#594A3D] rounded-[8px] overflow-hidden flex flex-col justify-between shadow-subtle">
+              <div class="w-full aspect-[16/10] overflow-hidden bg-[#201E1C] border-b border-[#302C29]">
+                <img 
+                  src="assets/images/dent-repair.webp" 
+                  alt="Dent and minor panel repair before assessment" 
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="p-6 pb-8 flex-1 flex flex-col justify-between text-center">
+                <div>
+                  <h3 class="font-display font-normal text-2xl sm:text-[26px] text-[#FFFCF6] uppercase leading-tight tracking-wide mb-3">
+                    DENT &amp; MINOR PANEL REPAIR
+                  </h3>
+                  <p class="text-xs text-[#E6D9C5] font-body leading-relaxed mb-6">
+                    Localised dent removal and panel shaping without full panel replacement. Careful bodywork restoration that preserves original body contours and vehicle integrity.
+                  </p>
+                </div>
+                <div class="flex justify-center mt-auto pt-2">
+                  <a href="#quote" onclick="selectDamageType('Dent & panel')" class="w-full max-w-[220px] bg-[#D52326] hover:bg-[#B51D26] text-white font-ui font-bold text-xs uppercase tracking-widest py-3.5 px-6 rounded-[4px] transition shadow-subtle text-center">
+                    GET A QUOTE
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3: Localised Paint Repair -->
+            <div class="w-full shrink-0 snap-center min-w-full bg-[#181614] border border-[#594A3D] rounded-[8px] overflow-hidden flex flex-col justify-between shadow-subtle">
+              <div class="w-full aspect-[16/10] overflow-hidden bg-[#201E1C] border-b border-[#302C29]">
+                <img 
+                  src="assets/images/paint-repair.webp" 
+                  alt="Localised precision spot paint repair and masking" 
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="p-6 pb-8 flex-1 flex flex-col justify-between text-center">
+                <div>
+                  <h3 class="font-display font-normal text-2xl sm:text-[26px] text-[#FFFCF6] uppercase leading-tight tracking-wide mb-3">
+                    LOCALISED PAINT REPAIR
+                  </h3>
+                  <p class="text-xs text-[#E6D9C5] font-body leading-relaxed mb-6">
+                    Blended spot repairs targeting only the damaged section. Preserves the vehicle's factory clear coat and avoids costly full-panel resprays.
+                  </p>
+                </div>
+                <div class="flex justify-center mt-auto pt-2">
+                  <a href="#quote" onclick="selectDamageType('Paint repair')" class="w-full max-w-[220px] bg-[#D52326] hover:bg-[#B51D26] text-white font-ui font-bold text-xs uppercase tracking-widest py-3.5 px-6 rounded-[4px] transition shadow-subtle text-center">
+                    GET A QUOTE
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4: Paint Colour Matching -->
+            <div class="w-full shrink-0 snap-center min-w-full bg-[#181614] border border-[#594A3D] rounded-[8px] overflow-hidden flex flex-col justify-between shadow-subtle">
+              <div class="w-full aspect-[16/10] overflow-hidden bg-[#201E1C] border-b border-[#302C29]">
+                <img 
+                  src="assets/images/colour-matching.webp" 
+                  alt="Smart Touch digital colour reading spectrophotometer device" 
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="p-6 pb-8 flex-1 flex flex-col justify-between text-center">
+                <div>
+                  <h3 class="font-display font-normal text-2xl sm:text-[26px] text-[#FFFCF6] uppercase leading-tight tracking-wide mb-3">
+                    PAINT COLOUR MATCHING
+                  </h3>
+                  <p class="text-xs text-[#E6D9C5] font-body leading-relaxed mb-6">
+                    Exact vehicle colour scanning using our specialist spectrum reader device. Reads manufacturer formulas directly for a seamless, undetectable paint blend.
+                  </p>
+                </div>
+                <div class="flex justify-center mt-auto pt-2">
+                  <a href="#quote" onclick="selectDamageType('Paint repair')" class="w-full max-w-[220px] bg-[#D52326] hover:bg-[#B51D26] text-white font-ui font-bold text-xs uppercase tracking-widest py-3.5 px-6 rounded-[4px] transition shadow-subtle text-center">
+                    GET A QUOTE
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 5: Bumper & Plastic Trim Repair -->
+            <div class="w-full shrink-0 snap-center min-w-full bg-[#181614] border border-[#594A3D] rounded-[8px] overflow-hidden flex flex-col justify-between shadow-subtle">
+              <div class="w-full aspect-[16/10] overflow-hidden bg-[#201E1C] border-b border-[#302C29]">
+                <img 
+                  src="assets/images/bumper-repair.webp" 
+                  alt="Bumper corner scuff and texture restoration finish" 
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="p-6 pb-8 flex-1 flex flex-col justify-between text-center">
+                <div>
+                  <h3 class="font-display font-normal text-2xl sm:text-[26px] text-[#FFFCF6] uppercase leading-tight tracking-wide mb-3">
+                    BUMPER &amp; PLASTIC TRIM REPAIR
+                  </h3>
+                  <p class="text-xs text-[#E6D9C5] font-body leading-relaxed mb-6">
+                    Corner scuffs, scraped bumper aprons, and textured plastic trim restoration. Repaired without removing or replacing the original bumper assembly.
+                  </p>
+                </div>
+                <div class="flex justify-center mt-auto pt-2">
+                  <a href="#quote" onclick="selectDamageType('Multiple / other')" class="w-full max-w-[220px] bg-[#D52326] hover:bg-[#B51D26] text-white font-ui font-bold text-xs uppercase tracking-widest py-3.5 px-6 rounded-[4px] transition shadow-subtle text-center">
+                    GET A QUOTE
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Slider Navigation Controls: Prev/Next Buttons + 5 Dots -->
+          <div class="flex items-center justify-between mt-4 px-2">
+            <button type="button" onclick="slideCoursePrev()" aria-label="Previous Repair Capability" class="w-10 h-10 bg-[#181614] border border-[#594A3D] text-[#FFFCF6] hover:text-[#D52326] rounded-[4px] flex items-center justify-center transition shadow-subtle active:scale-95">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+
+            <div id="courseSliderDots" class="flex items-center gap-2">
+              <button onclick="goToCourseSlide(0)" class="w-7 h-2 rounded-[2px] bg-[#D52326] transition-all duration-300" aria-label="Slide 1"></button>
+              <button onclick="goToCourseSlide(1)" class="w-2 h-2 rounded-[2px] bg-[#594A3D] transition-all duration-300" aria-label="Slide 2"></button>
+              <button onclick="goToCourseSlide(2)" class="w-2 h-2 rounded-[2px] bg-[#594A3D] transition-all duration-300" aria-label="Slide 3"></button>
+              <button onclick="goToCourseSlide(3)" class="w-2 h-2 rounded-[2px] bg-[#594A3D] transition-all duration-300" aria-label="Slide 4"></button>
+              <button onclick="goToCourseSlide(4)" class="w-2 h-2 rounded-[2px] bg-[#594A3D] transition-all duration-300" aria-label="Slide 5"></button>
+            </div>
+
+            <button type="button" onclick="slideCourseNext()" aria-label="Next Repair Capability" class="w-10 h-10 bg-[#181614] border border-[#594A3D] text-[#FFFCF6] hover:text-[#D52326] rounded-[4px] flex items-center justify-center transition shadow-subtle active:scale-95">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- DESKTOP & TABLET: UNIFIED 6-COLUMN GRID (Cards Centered Forward, Defined Dark Cards with Bronze Borders) -->
+        <div class="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 sm:gap-8 items-stretch">
+          
+          <!-- CARD 1: Scratch & Scuff Repair (Top Left) -->
+          <div class="lg:col-span-2 bg-[#181614] border border-[#594A3D] hover:border-[#766149] rounded-[8px] overflow-hidden flex flex-col justify-between transition duration-300 group shadow-subtle">
+            <div class="w-full aspect-[16/10] overflow-hidden bg-[#201E1C] border-b border-[#302C29]">
+              <img 
+                src="assets/images/scratch-repair.webp" 
+                alt="Scratch and scuff repair before assessment" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="p-6 sm:p-7 pb-8 sm:pb-9 flex-1 flex flex-col justify-between text-center">
+              <div>
+                <h3 class="font-display font-normal text-2xl sm:text-[26px] lg:text-[28px] text-[#FFFCF6] uppercase text-center leading-tight tracking-wide mb-3">
+                  SCRATCH &amp; SCUFF REPAIR
+                </h3>
+                <p class="text-xs sm:text-sm text-[#E6D9C5] font-body leading-relaxed text-center mb-6">
+                  Vandal scratches, key marks, panel scuffs, and clear-coat abrasions restored on site. We prep, prime, color-match, and bake the finish right on your driveway.
+                </p>
+              </div>
+              <div class="flex justify-center mt-auto pt-2">
+                <a href="#quote" onclick="selectDamageType('Scratch & scuff')" class="w-full max-w-[200px] bg-[#D52326] hover:bg-[#B51D26] active:bg-[#921B24] text-white font-ui font-bold text-xs uppercase tracking-widest py-3.5 px-6 rounded-[4px] transition duration-200 shadow-subtle text-center">
+                  GET A QUOTE
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 2: Dent & Minor Panel Repair (Top Center) -->
+          <div class="lg:col-span-2 bg-[#181614] border border-[#594A3D] hover:border-[#766149] rounded-[8px] overflow-hidden flex flex-col justify-between transition duration-300 group shadow-subtle">
+            <div class="w-full aspect-[16/10] overflow-hidden bg-[#201E1C] border-b border-[#302C29]">
+              <img 
+                src="assets/images/dent-repair.webp" 
+                alt="Dent and minor panel repair before assessment" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="p-6 sm:p-7 pb-8 sm:pb-9 flex-1 flex flex-col justify-between text-center">
+              <div>
+                <h3 class="font-display font-normal text-2xl sm:text-[26px] lg:text-[28px] text-[#FFFCF6] uppercase text-center leading-tight tracking-wide mb-3">
+                  DENT &amp; MINOR PANEL REPAIR
+                </h3>
+                <p class="text-xs sm:text-sm text-[#E6D9C5] font-body leading-relaxed text-center mb-6">
+                  Localised dent removal and panel shaping without full panel replacement. Careful bodywork restoration that preserves original body contours and vehicle integrity.
+                </p>
+              </div>
+              <div class="flex justify-center mt-auto pt-2">
+                <a href="#quote" onclick="selectDamageType('Dent & panel')" class="w-full max-w-[200px] bg-[#D52326] hover:bg-[#B51D26] active:bg-[#921B24] text-white font-ui font-bold text-xs uppercase tracking-widest py-3.5 px-6 rounded-[4px] transition duration-200 shadow-subtle text-center">
+                  GET A QUOTE
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 3: Localised Paint Repair (Top Right) -->
+          <div class="lg:col-span-2 bg-[#181614] border border-[#594A3D] hover:border-[#766149] rounded-[8px] overflow-hidden flex flex-col justify-between transition duration-300 group shadow-subtle">
+            <div class="w-full aspect-[16/10] overflow-hidden bg-[#201E1C] border-b border-[#302C29]">
+              <img 
+                src="assets/images/paint-repair.webp" 
+                alt="Localised precision spot paint repair and masking" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="p-6 sm:p-7 pb-8 sm:pb-9 flex-1 flex flex-col justify-between text-center">
+              <div>
+                <h3 class="font-display font-normal text-2xl sm:text-[26px] lg:text-[28px] text-[#FFFCF6] uppercase text-center leading-tight tracking-wide mb-3">
+                  LOCALISED PAINT REPAIR
+                </h3>
+                <p class="text-xs sm:text-sm text-[#E6D9C5] font-body leading-relaxed text-center mb-6">
+                  Blended spot repairs targeting only the damaged section to preserve the factory finish. High-solids clear coat ensures an invisible boundary with surrounding original paint.
+                </p>
+              </div>
+              <div class="flex justify-center mt-auto pt-2">
+                <a href="#quote" onclick="selectDamageType('Paint repair')" class="w-full max-w-[200px] bg-[#D52326] hover:bg-[#B51D26] active:bg-[#921B24] text-white font-ui font-bold text-xs uppercase tracking-widest py-3.5 px-6 rounded-[4px] transition duration-200 shadow-subtle text-center">
+                  GET A QUOTE
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 4: Paint Colour Matching (Bottom Row, Centered via lg:col-start-2 lg:col-span-2) -->
+          <div class="lg:col-start-2 lg:col-span-2 bg-[#181614] border border-[#594A3D] hover:border-[#766149] rounded-[8px] overflow-hidden flex flex-col justify-between transition duration-300 group shadow-subtle">
+            <div class="w-full aspect-[16/10] overflow-hidden bg-[#201E1C] border-b border-[#302C29]">
+              <img 
+                src="assets/images/colour-matching.webp" 
+                alt="Smart Touch digital colour reading spectrophotometer device" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="p-6 sm:p-7 pb-8 sm:pb-9 flex-1 flex flex-col justify-between text-center">
+              <div>
+                <h3 class="font-display font-normal text-2xl sm:text-[26px] lg:text-[28px] text-[#FFFCF6] uppercase text-center leading-tight tracking-wide mb-3">
+                  PAINT COLOUR MATCHING
+                </h3>
+                <p class="text-xs sm:text-sm text-[#E6D9C5] font-body leading-relaxed text-center mb-6">
+                  Exact vehicle colour scanning using our specialist spectrum reader device. Reads manufacturer codes and aged-finish variations for a bespoke, computer-matched formulation.
+                </p>
+              </div>
+              <div class="flex justify-center mt-auto pt-2">
+                <a href="#quote" onclick="selectDamageType('Paint repair')" class="w-full max-w-[200px] bg-[#D52326] hover:bg-[#B51D26] active:bg-[#921B24] text-white font-ui font-bold text-xs uppercase tracking-widest py-3.5 px-6 rounded-[4px] transition duration-200 shadow-subtle text-center">
+                  GET A QUOTE
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 5: Bumper & Plastic Trim Repair (Bottom Row, Centered via lg:col-span-2) -->
+          <div class="lg:col-span-2 md:col-span-2 md:max-w-md md:mx-auto lg:max-w-none w-full bg-[#181614] border border-[#594A3D] hover:border-[#766149] rounded-[8px] overflow-hidden flex flex-col justify-between transition duration-300 group shadow-subtle">
+            <div class="w-full aspect-[16/10] overflow-hidden bg-[#201E1C] border-b border-[#302C29]">
+              <img 
+                src="assets/images/bumper-repair.webp" 
+                alt="Bumper corner scuff and texture restoration finish" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="p-6 sm:p-7 pb-8 sm:pb-9 flex-1 flex flex-col justify-between text-center">
+              <div>
+                <h3 class="font-display font-normal text-2xl sm:text-[26px] lg:text-[28px] text-[#FFFCF6] uppercase text-center leading-tight tracking-wide mb-3">
+                  BUMPER &amp; PLASTIC TRIM REPAIR
+                </h3>
+                <p class="text-xs sm:text-sm text-[#E6D9C5] font-body leading-relaxed text-center mb-6">
+                  Corner scuffs, scraped bumper aprons, and textured trim restoration. Localised repair avoids costly bumper detachment, electrical sensor rewiring, or complete replacement.
+                </p>
+              </div>
+              <div class="flex justify-center mt-auto pt-2">
+                <a href="#quote" onclick="selectDamageType('Multiple / other')" class="w-full max-w-[200px] bg-[#D52326] hover:bg-[#B51D26] active:bg-[#921B24] text-white font-ui font-bold text-xs uppercase tracking-widest py-3.5 px-6 rounded-[4px] transition duration-200 shadow-subtle text-center">
+                  GET A QUOTE
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================================================
+         SECTION 5: WHY CHOOSE SMART TOUCH
+    ========================================================== -->
+    <section id="why-choose" class="relative w-full py-16 sm:py-24 bg-[#181614] overflow-hidden">
+      <div class="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+          
+          <!-- Left Column: Outdoor Commercial Monument Signboard (5 Columns, Inspired by Reference Image) -->
+          <div class="lg:col-span-5 flex justify-center items-center my-auto">
+            <div class="w-full max-w-[480px] aspect-square bg-[#201E1C] rounded-2xl sm:rounded-[24px] overflow-hidden border border-[#594A3D] shadow-subtle flex items-center justify-center group transition duration-300">
+              <img 
+                src="assets/images/board-option-1.webp" 
+                alt="Smart Touch official commercial roadside monument sign in Birmingham and Solihull" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+
+          <!-- Right Column: Headline & 6-Item Checklist (7 Columns, Center-Aligned Layers) -->
+          <div class="lg:col-span-7 flex flex-col justify-center items-center text-center my-auto">
+            
+            <h2 class="font-headline font-semibold text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-[#FFFCF6] tracking-tight uppercase leading-[1.1] mb-8 text-center max-w-2xl mx-auto">
+              <span class="block">WHY DRIVERS CHOOSE</span>
+              <span class="block text-[#D52326] mt-1 sm:mt-1.5">SMART TOUCH</span>
+            </h2>
+
+            <!-- 6 High-Value CRO Checklist Items (Centered Container) -->
+            <div class="space-y-4 sm:space-y-5 max-w-xl mx-auto text-left w-full">
+              
+              <!-- Item 1: Repairs at Your Door -->
+              <div class="flex items-start gap-3.5">
+                <div class="w-6 h-6 bg-[#181614] border border-[#594A3D] text-[#D52326] rounded-[2px] flex items-center justify-center shrink-0 mt-0.5 shadow-subtle">
+                  <svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <p class="text-sm sm:text-base text-[#E6D9C5] font-body leading-relaxed">
+                  <strong class="text-[#FFFCF6] font-semibold">Repairs at Your Door —</strong> We come directly to your home or office; no waiting around in reception rooms or arranging alternative transport.
+                </p>
+              </div>
+
+              <!-- Item 2: Specialist Spectrum Colour Reading -->
+              <div class="flex items-start gap-3.5">
+                <div class="w-6 h-6 bg-[#181614] border border-[#594A3D] text-[#D52326] rounded-[2px] flex items-center justify-center shrink-0 mt-0.5 shadow-subtle">
+                  <svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <p class="text-sm sm:text-base text-[#E6D9C5] font-body leading-relaxed">
+                  <strong class="text-[#FFFCF6] font-semibold">Specialist Spectrum Colour Reading —</strong> Digital paint scanner reads your car's exact formulation for an accurate, factory-matched blend.
+                </p>
+              </div>
+
+              <!-- Item 3: Clear Upfront Quotes -->
+              <div class="flex items-start gap-3.5">
+                <div class="w-6 h-6 bg-[#181614] border border-[#594A3D] text-[#D52326] rounded-[2px] flex items-center justify-center shrink-0 mt-0.5 shadow-subtle">
+                  <svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <p class="text-sm sm:text-base text-[#E6D9C5] font-body leading-relaxed">
+                  <strong class="text-[#FFFCF6] font-semibold">Clear Upfront Quotes —</strong> The quote you receive based on your photos is the price you pay; no hidden surprises or sudden add-ons.
+                </p>
+              </div>
+
+              <!-- Item 4: No Bodyshop Delays -->
+              <div class="flex items-start gap-3.5">
+                <div class="w-6 h-6 bg-[#181614] border border-[#594A3D] text-[#D52326] rounded-[2px] flex items-center justify-center shrink-0 mt-0.5 shadow-subtle">
+                  <svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <p class="text-sm sm:text-base text-[#E6D9C5] font-body leading-relaxed">
+                  <strong class="text-[#FFFCF6] font-semibold">No Bodyshop Delays —</strong> Localised repairs are typically completed in a single session so your vehicle remains in daily use.
+                </p>
+              </div>
+
+              <!-- Item 5: 100% Recommendation on Facebook -->
+              <div class="flex items-start gap-3.5">
+                <div class="w-6 h-6 bg-[#181614] border border-[#594A3D] text-[#D52326] rounded-[2px] flex items-center justify-center shrink-0 mt-0.5 shadow-subtle">
+                  <svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <p class="text-sm sm:text-base text-[#E6D9C5] font-body leading-relaxed">
+                  <strong class="text-[#FFFCF6] font-semibold">100% Recommendation on Facebook —</strong> Proven local reputation backed by 60+ verified reviews from satisfied West Midlands drivers.
+                </p>
+              </div>
+
+              <!-- Item 6: Birmingham & Solihull Local Focus -->
+              <div class="flex items-start gap-3.5">
+                <div class="w-6 h-6 bg-[#181614] border border-[#594A3D] text-[#D52326] rounded-[2px] flex items-center justify-center shrink-0 mt-0.5 shadow-subtle">
+                  <svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <p class="text-sm sm:text-base text-[#E6D9C5] font-body leading-relaxed">
+                  <strong class="text-[#FFFCF6] font-semibold">Birmingham &amp; Solihull Local Focus —</strong> Dedicated local coverage ensuring responsive scheduling, prompt appointments, and reliable aftercare.
+                </p>
+              </div>
+
+            </div>
+
+            <!-- Direct Phone Link (Centered) -->
+            <div class="mt-8 text-center w-full">
+              <a href="tel:+447496005074" class="inline-flex items-center gap-2 text-[#FFFCF6] hover:text-[#D52326] font-ui font-bold text-sm uppercase tracking-wider transition">
+                <span>Speak to Smart Touch: 07496 005074</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 4: LOCAL CRAFTSMANSHIP & STORY
+    ========================================================== -->
+    <section id="craftsmanship" class="relative w-full py-16 sm:py-24 bg-[#201E1C] overflow-hidden">
+      <div class="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+          
+          <!-- Left Column: Narrative & Checklist (7 Columns, Matching Section 5 Style) -->
+          <div class="lg:col-span-7 flex flex-col justify-center items-center text-center my-auto">
+            
+            <h2 class="font-display font-normal text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-[#FFFCF6] tracking-wider uppercase leading-[1.05] mb-8 text-center max-w-2xl mx-auto">
+              <span class="block">DIRECT MOBILE</span>
+              <span class="block text-[#D52326] mt-1 sm:mt-1.5">CRAFTSMANSHIP</span>
+            </h2>
+
+            <!-- 4 High-Value Craftsmanship Checklist Items (Centered Container) -->
+            <div class="space-y-4 sm:space-y-5 max-w-xl mx-auto text-left w-full">
+              
+              <!-- Item 1: Self-Contained Mobile Workshop -->
+              <div class="flex items-start gap-3.5">
+                <div class="w-6 h-6 bg-[#181614] border border-[#594A3D] text-[#D52326] rounded-[2px] flex items-center justify-center shrink-0 mt-0.5 shadow-subtle">
+                  <svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <p class="text-sm sm:text-base text-[#E6D9C5] font-body leading-relaxed">
+                  <strong class="text-[#FFFCF6] font-semibold">Self-Contained Mobile Workshop —</strong> Fully equipped mobile repair van with professional spray gear, infrared curing lamps, and high-solids clear coats.
+                </p>
+              </div>
+
+              <!-- Item 2: Direct Technician Contact -->
+              <div class="flex items-start gap-3.5">
+                <div class="w-6 h-6 bg-[#181614] border border-[#594A3D] text-[#D52326] rounded-[2px] flex items-center justify-center shrink-0 mt-0.5 shadow-subtle">
+                  <svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <p class="text-sm sm:text-base text-[#E6D9C5] font-body leading-relaxed">
+                  <strong class="text-[#FFFCF6] font-semibold">Direct Technician Contact —</strong> Speak directly with the specialist handling your repair; honest assessments with zero middleman or dealership markup.
+                </p>
+              </div>
+
+              <!-- Item 3: Tidy Driveway Protocol -->
+              <div class="flex items-start gap-3.5">
+                <div class="w-6 h-6 bg-[#181614] border border-[#594A3D] text-[#D52326] rounded-[2px] flex items-center justify-center shrink-0 mt-0.5 shadow-subtle">
+                  <svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <p class="text-sm sm:text-base text-[#E6D9C5] font-body leading-relaxed">
+                  <strong class="text-[#FFFCF6] font-semibold">Tidy Driveway Protocol —</strong> Respectful on-site operation that keeps your vehicle safely at home and leaves your driveway spotless.
+                </p>
+              </div>
+
+              <!-- Item 4: Same-Day Turnaround -->
+              <div class="flex items-start gap-3.5">
+                <div class="w-6 h-6 bg-[#181614] border border-[#594A3D] text-[#D52326] rounded-[2px] flex items-center justify-center shrink-0 mt-0.5 shadow-subtle">
+                  <svg class="w-3.5 h-3.5 fill-none stroke-current" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <p class="text-sm sm:text-base text-[#E6D9C5] font-body leading-relaxed">
+                  <strong class="text-[#FFFCF6] font-semibold">Same-Day Turnaround —</strong> Localised repairs completed in a single 2 to 4-hour visit so your vehicle remains in daily use with zero bodyshop downtime.
+                </p>
+              </div>
+
+            </div>
+
+            <!-- Direct Quote Link (Centered) -->
+            <div class="mt-8 text-center w-full">
+              <a href="#quote" class="inline-flex items-center gap-2 text-[#FFFCF6] hover:text-[#D52326] font-ui font-bold text-sm uppercase tracking-wider transition">
+                <span>Tell Us About Your Repair</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Matching Repair Photo (5 Columns, Matching Section 5 Container) -->
+          <div class="lg:col-span-5 flex justify-center items-center my-auto">
+            <div class="w-full max-w-[460px] aspect-square bg-[#181614] border border-[#594A3D] rounded-[8px] overflow-hidden shadow-subtle flex items-center justify-center group transition duration-300">
+              <img 
+                src="assets/images/paint-repair.webp" 
+                alt="Smart Touch vehicle body repair in progress - precision localised paint refinishing and inspection" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION: REAL BEFORE & AFTER REPAIR GALLERY (PRD.md Section 7.5)
+         - Color System strictly from design.md:
+           Deep Obsidian Showcase Surface: #181614
+           Structural Bronze Border: #594A3D
+           Brilliant Porcelain Headline: #FFFCF6
+           Warm Supporting Linen: #E6D9C5
+           Brand Red Accents: #D52326
+         - Generous Description Padding (Centered, Editorial Spacing)
+         - Zero quote buttons in case layouts
+    ========================================================== -->
+    <section id="gallery" class="relative w-full py-16 sm:py-24 lg:py-28 bg-[#181614] overflow-hidden">
+      
+      <!-- Section Title: Crisp Porcelain & Brand Red on Deep Obsidian Surface -->
+      <div class="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12 sm:mb-16">
+        <h2 class="w-full font-headline font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[80px] tracking-tight uppercase leading-[1.04] text-center">
+          <span class="text-[#FFFCF6]">BEFORE &amp; AFTER</span> <span class="text-[#D52326]">REPAIR GALLERY</span>
+        </h2>
+        <p class="mt-4 text-base sm:text-lg text-[#E6D9C5] font-body leading-relaxed max-w-xl mx-auto px-6">
+          Documented 3-stage repair sequences completed on-site on customer driveways across Birmingham and Solihull.
+        </p>
+      </div>
+
+      <!-- BEFORE & AFTER CASES (Refined & Compact Container Matching Wireframe) -->
+      <div class="w-full max-w-[880px] mx-auto px-4 sm:px-6 flex flex-col space-y-16 sm:space-y-20 lg:space-y-24">
+        
+        <!-- CASE 1 - PASSENGER DOOR DENT & CREASE -->
+        <article class="w-full flex flex-col items-center">
+          
+          <!-- Image Box (Slider - Compact Aspect & Max Height) -->
+          <div id="comparisonCase1" class="comparison-slider-container relative w-full aspect-[16/10] max-h-[500px] rounded-lg sm:rounded-xl border border-[#594A3D] bg-[#201E1C] overflow-hidden shadow-subtle select-none group">
+            <!-- After Image (Base) -->
+            <img 
+              src="assets/images/case1-after.webp" 
+              alt="Silver car passenger door after dent removal and localised paint blend" 
+              class="absolute inset-0 w-full h-full object-cover select-none pointer-events-none"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="absolute top-3.5 right-3.5 sm:top-5 sm:right-6 bg-[#D52326] text-white font-ui font-bold text-xs sm:text-sm uppercase tracking-wider px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-[4px] z-10 shadow-subtle pointer-events-none">
+              RESTORED FINISH
+            </div>
+
+            <!-- Before Image (Clipped Overlay) -->
+            <div class="comparison-before-layer absolute inset-0 overflow-hidden select-none pointer-events-none">
+              <img 
+                src="assets/images/case1-before.webp" 
+                alt="Silver car passenger door before repair with deep dent crease" 
+                class="absolute inset-0 w-full h-full object-cover select-none pointer-events-none"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="absolute top-3.5 left-3.5 sm:top-5 sm:left-6 bg-[#201E1C] border border-[#594A3D] text-[#FFFCF6] font-ui font-bold text-xs sm:text-sm uppercase tracking-wider px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-[4px] z-10 shadow-subtle pointer-events-none">
+                BEFORE DAMAGE
+              </div>
+            </div>
+
+            <!-- Interactive Divider Line & Handle -->
+            <div class="comparison-divider-line absolute top-0 bottom-0 pointer-events-none z-10 -ml-[1px]">
+              <div class="w-[3px] h-full bg-[#FFFCF6] shadow-subtle"></div>
+              <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#D52326] border-2 border-white flex items-center justify-center text-white shadow-subtle">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5V7zm8 0v10l5-5-5-5z"/></svg>
+              </div>
+            </div>
+
+            <!-- Draggable Range Input -->
+            <input 
+              type="range" 
+              min="0" 
+              max="100" 
+              value="50" 
+              aria-label="Drag to compare before and after door dent repair" 
+              class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20"
+            />
+          </div>
+
+          <!-- Title & Description Block: Increased Side Padding & Elegant Breathing Room -->
+          <div class="w-full text-center mt-8 sm:mt-10 max-w-xl mx-auto px-6 sm:px-10">
+            <h3 class="font-headline font-bold text-2xl sm:text-3xl md:text-4xl text-[#FFFCF6] uppercase tracking-tight leading-tight">
+              Passenger Door Dent &amp; Crease
+            </h3>
+            <p class="mt-4 sm:mt-5 text-sm sm:text-base text-[#E6D9C5] font-body leading-relaxed px-2 sm:px-6">
+              Documented 3-stage repair sequence completed on-site on a customer driveway in Solihull. Multi-point paintless dent extraction and precision panel contouring were applied without stripping the interior door card, followed by localized primer, automated spectrometer paint matching, and a durable high-gloss clear coat cured on location in a single 3-hour appointment.
+            </p>
+          </div>
+
+        </article>
+
+        <!-- CASE 2 - FRONT BUMPER CORNER SCUFF & RASH -->
+        <article class="w-full flex flex-col items-center">
+          
+          <!-- Image Box (Slider - Compact Aspect & Max Height) -->
+          <div id="comparisonCase2" class="comparison-slider-container relative w-full aspect-[16/10] max-h-[500px] rounded-lg sm:rounded-xl border border-[#594A3D] bg-[#201E1C] overflow-hidden shadow-subtle select-none group">
+            <!-- After Image (Base) -->
+            <img 
+              src="assets/images/case2-after.webp" 
+              alt="Charcoal grey bumper corner after SMART paint respray and clear coat" 
+              class="absolute inset-0 w-full h-full object-cover select-none pointer-events-none"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="absolute top-3.5 right-3.5 sm:top-5 sm:right-6 bg-[#D52326] text-white font-ui font-bold text-xs sm:text-sm uppercase tracking-wider px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-[4px] z-10 shadow-subtle pointer-events-none">
+              RESTORED FINISH
+            </div>
+
+            <!-- Before Image (Clipped Overlay) -->
+            <div class="comparison-before-layer absolute inset-0 overflow-hidden select-none pointer-events-none">
+              <img 
+                src="assets/images/case2-before.webp" 
+                alt="Charcoal grey bumper corner before repair with severe curb rash scuff" 
+                class="absolute inset-0 w-full h-full object-cover select-none pointer-events-none"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="absolute top-3.5 left-3.5 sm:top-5 sm:left-6 bg-[#201E1C] border border-[#594A3D] text-[#FFFCF6] font-ui font-bold text-xs sm:text-sm uppercase tracking-wider px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-[4px] z-10 shadow-subtle pointer-events-none">
+                BEFORE DAMAGE
+              </div>
+            </div>
+
+            <!-- Interactive Divider Line & Handle -->
+            <div class="comparison-divider-line absolute top-0 bottom-0 pointer-events-none z-10 -ml-[1px]">
+              <div class="w-[3px] h-full bg-[#FFFCF6] shadow-subtle"></div>
+              <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#D52326] border-2 border-white flex items-center justify-center text-white shadow-subtle">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5V7zm8 0v10l5-5-5-5z"/></svg>
+              </div>
+            </div>
+
+            <!-- Draggable Range Input -->
+            <input 
+              type="range" 
+              min="0" 
+              max="100" 
+              value="50" 
+              aria-label="Drag to compare before and after bumper corner repair" 
+              class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20"
+            />
+          </div>
+
+          <!-- Title & Description Block: Increased Side Padding & Elegant Breathing Room -->
+          <div class="w-full text-center mt-8 sm:mt-10 max-w-xl mx-auto px-6 sm:px-10">
+            <h3 class="font-headline font-bold text-2xl sm:text-3xl md:text-4xl text-[#FFFCF6] uppercase tracking-tight leading-tight">
+              Bumper Corner Scuff &amp; Rash
+            </h3>
+            <p class="mt-4 sm:mt-5 text-sm sm:text-base text-[#E6D9C5] font-body leading-relaxed px-2 sm:px-6">
+              Severe curb rash and deep plastic abrasion restored on a residential driveway in Harborne. The scuffed bumper corner was leveled, re-profiled with flexible adhesion promoter, primed, and spray-finished using automated spectrometer paint formulation to exact manufacturer code—avoiding whole bumper removal or costly bodyshop delays.
+            </p>
+          </div>
+
+        </article>
+
+        <!-- CASE 3 - REAR QUARTER KEY SCRATCH -->
+        <article class="w-full flex flex-col items-center">
+          
+          <!-- Image Box (Slider - Compact Aspect & Max Height) -->
+          <div id="comparisonCase3" class="comparison-slider-container relative w-full aspect-[16/10] max-h-[500px] rounded-lg sm:rounded-xl border border-[#594A3D] bg-[#201E1C] overflow-hidden shadow-subtle select-none group">
+            <!-- After Image (Base) -->
+            <img 
+              src="assets/images/case3-after.webp" 
+              alt="Metallic blue quarter panel after scratch repair and undetectable paint match" 
+              class="absolute inset-0 w-full h-full object-cover select-none pointer-events-none"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="absolute top-3.5 right-3.5 sm:top-5 sm:right-6 bg-[#D52326] text-white font-ui font-bold text-xs sm:text-sm uppercase tracking-wider px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-[4px] z-10 shadow-subtle pointer-events-none">
+              RESTORED FINISH
+            </div>
+
+            <!-- Before Image (Clipped Overlay) -->
+            <div class="comparison-before-layer absolute inset-0 overflow-hidden select-none pointer-events-none">
+              <img 
+                src="assets/images/case3-before.webp" 
+                alt="Metallic blue quarter panel before repair with deep key scratch" 
+                class="absolute inset-0 w-full h-full object-cover select-none pointer-events-none"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="absolute top-3.5 left-3.5 sm:top-5 sm:left-6 bg-[#201E1C] border border-[#594A3D] text-[#FFFCF6] font-ui font-bold text-xs sm:text-sm uppercase tracking-wider px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-[4px] z-10 shadow-subtle pointer-events-none">
+                BEFORE DAMAGE
+              </div>
+            </div>
+
+            <!-- Interactive Divider Line & Handle -->
+            <div class="comparison-divider-line absolute top-0 bottom-0 pointer-events-none z-10 -ml-[1px]">
+              <div class="w-[3px] h-full bg-[#FFFCF6] shadow-subtle"></div>
+              <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#D52326] border-2 border-white flex items-center justify-center text-white shadow-subtle">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5V7zm8 0v10l5-5-5-5z"/></svg>
+              </div>
+            </div>
+
+            <!-- Draggable Range Input -->
+            <input 
+              type="range" 
+              min="0" 
+              max="100" 
+              value="50" 
+              aria-label="Drag to compare before and after key scratch repair" 
+              class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20"
+            />
+          </div>
+
+          <!-- Title & Description Block: Increased Side Padding & Elegant Breathing Room -->
+          <div class="w-full text-center mt-8 sm:mt-10 max-w-xl mx-auto px-6 sm:px-10">
+            <h3 class="font-headline font-bold text-2xl sm:text-3xl md:text-4xl text-[#FFFCF6] uppercase tracking-tight leading-tight">
+              Vandal Key Scratch Repair
+            </h3>
+            <p class="mt-4 sm:mt-5 text-sm sm:text-base text-[#E6D9C5] font-body leading-relaxed px-2 sm:px-6">
+              Deep malicious key scratch spanning across the rear quarter panel repaired on a driveway in Sutton Coldfield. The gouge was feathered back to sound clear coat, sealed against corrosion, and blended seamlessly into adjacent factory panels using precision micro-respray technology, leaving a showroom-grade finish with zero colour mismatch under direct sunlight.
+            </p>
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- =========================================================
+         SECTION 7: FAST-TRACK APPOINTMENT & QUOTE SYSTEM
+    ========================================================== -->
+    <section id="quote" class="relative w-full py-16 sm:py-24 bg-[#201E1C] overflow-hidden">
+      
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header: Exactly matching 2-Line Reference -->
+        <div class="text-center w-full max-w-full mx-auto mb-10 sm:mb-14 px-2">
+          <h2 class="w-full leading-[1.05] text-center">
+            <span class="block font-headline font-bold text-[#FFFCF6] text-[28px] min-[400px]:text-[34px] sm:text-5xl md:text-[54px] lg:text-[64px] xl:text-[72px] 2xl:text-[78px] tracking-tight uppercase sm:whitespace-nowrap">FAST-TRACK YOUR REPAIR</span>
+            <span class="block font-headline text-[#D52326] text-[30px] min-[400px]:text-[38px] sm:text-5xl md:text-[56px] lg:text-[66px] xl:text-[74px] 2xl:text-[80px] tracking-tight mt-1 sm:mt-2.5 lowercase font-light font-[300] sm:whitespace-nowrap">appointment</span>
+          </h2>
+          <p class="mt-4 sm:mt-5 text-sm sm:text-base lg:text-lg text-[#E6D9C5] font-body max-w-2xl mx-auto leading-relaxed text-center">
+            Reserve your slot in under 60 seconds with zero upfront deposit. Smart Touch personally confirms your quote and date within 15 minutes.
+          </p>
+        </div>
+
+        <!-- Main 3-Step Booking Card Container -->
+        <div class="bg-[#2B2927] rounded-[10px] p-4 sm:p-10 relative text-[#FFFCF6] shadow-[0_24px_60px_-15px_rgba(0,0,0,0.85),0_0_40px_rgba(0,0,0,0.5)] overflow-hidden">
+          
+          <!-- Top Horizontal Step Tabs Navigation (Clean flush border) -->
+          <div id="stepProgressContainer" class="border-b border-[#594A3D] -mx-4 sm:-mx-10 -mt-4 sm:-mt-10 px-4 sm:px-10 pt-4 mb-8 bg-[#2B2927] flex items-center justify-between text-[11px] sm:text-xs md:text-sm font-ui font-bold uppercase tracking-wider select-none">
+            <button 
+              type="button" 
+              id="tabStep1" 
+              onclick="clickTab(1)" 
+              class="pb-3 sm:pb-4 border-b-2 border-[#D52326] text-[#D52326] flex items-center gap-1.5 sm:gap-2 transition cursor-pointer font-ui text-[11px] sm:text-xs md:text-sm font-bold uppercase tracking-wider shrink-0"
+            >
+              <span id="tabBadge1" class="w-5 h-5 rounded-full bg-[#D52326] text-white text-[10px] font-black flex items-center justify-center shrink-0">1</span>
+              <span>PROGRAM</span>
+            </button>
+            <button 
+              type="button" 
+              id="tabStep2" 
+              onclick="clickTab(2)" 
+              class="pb-3 sm:pb-4 border-b-2 border-transparent text-[#E6D9C5] hover:text-[#FFFCF6] flex items-center gap-1.5 sm:gap-2 transition cursor-pointer font-ui text-[11px] sm:text-xs md:text-sm font-bold uppercase tracking-wider shrink-0"
+            >
+              <span id="tabBadge2" class="w-5 h-5 rounded-full bg-[#1E1C1A] border border-[#594A3D] text-[#E6D9C5] text-[10px] font-black flex items-center justify-center shrink-0">2</span>
+              <span>CONTACT</span>
+            </button>
+            <button 
+              type="button" 
+              id="tabStep3" 
+              onclick="clickTab(3)" 
+              class="pb-3 sm:pb-4 border-b-2 border-transparent text-[#E6D9C5] hover:text-[#FFFCF6] flex items-center gap-1.5 sm:gap-2 transition cursor-pointer font-ui text-[11px] sm:text-xs md:text-sm font-bold uppercase tracking-wider shrink-0"
+            >
+              <span id="tabBadge3" class="w-5 h-5 rounded-full bg-[#1E1C1A] border border-[#594A3D] text-[#E6D9C5] text-[10px] font-black flex items-center justify-center shrink-0">3</span>
+              <span>SCHEDULE</span>
+            </button>
+          </div>
+
+          <!-- Alert Notice for Validation -->
+          <div id="formError" class="hidden mb-6 p-4 bg-[#F5DDD8] border border-[#921B24] text-[#921B24] rounded-[4px] text-xs sm:text-sm font-ui font-semibold" role="alert"></div>
+
+          <!-- STEP 1: SELECT YOUR PROGRAM / REPAIR SERVICE -->
+          <div id="formStep1" class="transition-all duration-300">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="font-headline font-bold text-xl sm:text-2xl text-[#FFFCF6] uppercase tracking-tight">
+                1. SELECT YOUR PROGRAM
+              </h3>
+              <span class="text-[11px] font-ui font-bold text-[#E6D9C5] uppercase tracking-wider bg-[#1E1C1A] px-2.5 py-1 border border-[#594A3D] rounded-[4px]">
+                1 CLICK
+              </span>
+            </div>
+            <p class="text-xs sm:text-sm text-[#E6D9C5] font-body mb-6">
+              Click your preferred mobile repair service option below.
+            </p>
+
+            <!-- 2x2 Radio Grid of Options (Exact Layout) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-8">
+              
+              <!-- Option 1: Scratch & scuff (Default active) -->
+              <label class="damage-card relative flex items-start gap-3.5 p-4 bg-[#181614] border border-[#D52326] rounded-[6px] cursor-pointer transition-all duration-200 select-none shadow-subtle hover:border-[#D52326]">
+                <input type="radio" name="damageChoice" value="Scratch & scuff" class="sr-only" checked onchange="handleDamageChange(this)" />
+                <div class="radio-dot w-5 h-5 bg-[#D52326] flex items-center justify-center shrink-0 mt-0.5 rounded-full">
+                  <div class="w-2 h-2 bg-white rounded-full"></div>
+                </div>
+                <div>
+                  <span class="block text-sm font-ui font-bold text-[#FFFCF6] uppercase">SCRATCH &amp; SCUFF REPAIR</span>
+                  <span class="block text-xs text-[#E6D9C5] font-body mt-0.5">Vandal scratches, key marks, panel scuffs &amp; stone chips</span>
+                </div>
+              </label>
+
+              <!-- Option 2: Dent & minor panel -->
+              <label class="damage-card relative flex items-start gap-3.5 p-4 bg-[#181614] border border-[#594A3D] rounded-[6px] hover:border-[#D52326] cursor-pointer transition-all duration-200 select-none shadow-subtle">
+                <input type="radio" name="damageChoice" value="Dent & panel" class="sr-only" onchange="handleDamageChange(this)" />
+                <div class="radio-dot w-5 h-5 border border-[#594A3D] bg-transparent flex items-center justify-center shrink-0 mt-0.5 rounded-full">
+                  <div class="w-2 h-2 bg-transparent rounded-full"></div>
+                </div>
+                <div>
+                  <span class="block text-sm font-ui font-bold text-[#FFFCF6] uppercase">DENT &amp; MINOR PANEL REPAIR</span>
+                  <span class="block text-xs text-[#E6D9C5] font-body mt-0.5">Localised dent removal &amp; minor panel shaping without respray</span>
+                </div>
+              </label>
+
+              <!-- Option 3: Localised paint repair -->
+              <label class="damage-card relative flex items-start gap-3.5 p-4 bg-[#181614] border border-[#594A3D] rounded-[6px] hover:border-[#D52326] cursor-pointer transition-all duration-200 select-none shadow-subtle">
+                <input type="radio" name="damageChoice" value="Paint repair" class="sr-only" onchange="handleDamageChange(this)" />
+                <div class="radio-dot w-5 h-5 border border-[#594A3D] bg-transparent flex items-center justify-center shrink-0 mt-0.5 rounded-full">
+                  <div class="w-2 h-2 bg-transparent rounded-full"></div>
+                </div>
+                <div>
+                  <span class="block text-sm font-ui font-bold text-[#FFFCF6] uppercase">LOCALISED PAINT REPAIR</span>
+                  <span class="block text-xs text-[#E6D9C5] font-body mt-0.5">Blended spot repairs targeting only the damaged section</span>
+                </div>
+              </label>
+
+              <!-- Option 4: Bumper & plastic trim -->
+              <label class="damage-card relative flex items-start gap-3.5 p-4 bg-[#181614] border border-[#594A3D] rounded-[6px] hover:border-[#D52326] cursor-pointer transition-all duration-200 select-none shadow-subtle">
+                <input type="radio" name="damageChoice" value="Bumper & plastic trim" class="sr-only" onchange="handleDamageChange(this)" />
+                <div class="radio-dot w-5 h-5 border border-[#594A3D] bg-transparent flex items-center justify-center shrink-0 mt-0.5 rounded-full">
+                  <div class="w-2 h-2 bg-transparent rounded-full"></div>
+                </div>
+                <div>
+                  <span class="block text-sm font-ui font-bold text-[#FFFCF6] uppercase">BUMPER &amp; PLASTIC TRIM</span>
+                  <span class="block text-xs text-[#E6D9C5] font-body mt-0.5">Cracked, scraped or scuffed plastic bumper restoration</span>
+                </div>
+              </label>
+            </div>
+
+            <!-- Next Button: Aligned to Right as in reference -->
+            <div class="flex justify-end pt-2">
+              <button 
+                type="button" 
+                onclick="goToStep(2)" 
+                class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#D52326] hover:bg-[#B51D26] active:bg-[#921B24] text-white px-7 py-3.5 rounded-[4px] font-ui font-bold text-xs uppercase tracking-wider transition shadow-subtle cursor-pointer"
+              >
+                <span>NEXT: YOUR CONTACT</span>
+                <span aria-hidden="true">&rarr;</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- STEP 2: ENTER YOUR CONTACT DETAILS -->
+          <div id="formStep2" class="hidden transition-all duration-300">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="font-headline font-bold text-xl sm:text-2xl text-[#FFFCF6] uppercase tracking-tight">
+                2. ENTER YOUR CONTACT DETAILS
+              </h3>
+              <span class="text-[11px] font-ui font-bold text-[#E6D9C5] uppercase tracking-wider bg-[#1E1C1A] px-2.5 py-1 border border-[#594A3D] rounded-[4px]">
+                STEP 2 OF 3
+              </span>
+            </div>
+            <p class="text-xs sm:text-sm text-[#E6D9C5] font-body mb-6">
+              We will only use this to confirm your repair quote and mobile arrival window.
+            </p>
+
+            <div class="space-y-4 mb-8">
+              <div>
+                <label for="fbName" class="block text-xs font-ui font-bold uppercase tracking-wider text-[#FFFCF6] mb-2">
+                  Full Name <span class="text-[#D52326]">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="fbName" 
+                  name="fullName"
+                  placeholder="e.g. David Walker" 
+                  maxlength="100"
+                  required
+                  class="w-full bg-[#FFFCF6] text-[#302A24] font-ui text-sm px-4 py-3.5 rounded-[4px] border border-[#766149] focus:outline-none focus:ring-2 focus:ring-[#D52326] transition placeholder:text-[#594532]"
+                />
+                <p id="nameError" class="hidden text-xs text-[#F5DDD8] mt-1.5 font-ui">Please enter your full name to proceed.</p>
+              </div>
+
+              <div>
+                <label for="fbPhone" class="block text-xs font-ui font-bold uppercase tracking-wider text-[#FFFCF6] mb-2">
+                  Phone Number <span class="text-[#D52326]">*</span>
+                </label>
+                <input 
+                  type="tel" 
+                  id="fbPhone" 
+                  name="phone"
+                  placeholder="e.g. 07496 005074" 
+                  maxlength="30"
+                  required
+                  class="w-full bg-[#FFFCF6] text-[#302A24] font-ui text-sm px-4 py-3.5 rounded-[4px] border border-[#766149] focus:outline-none focus:ring-2 focus:ring-[#D52326] transition placeholder:text-[#594532]"
+                />
+                <p id="phoneError" class="hidden text-xs text-[#F5DDD8] mt-1.5 font-ui">Please enter a valid telephone number for your quote.</p>
+              </div>
+
+              <div>
+                <label for="fbPostcode" class="block text-xs font-ui font-bold uppercase tracking-wider text-[#FFFCF6] mb-2">
+                  Postcode (Birmingham / Solihull / Surrounding) <span class="text-[#D52326]">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="fbPostcode" 
+                  name="postcode"
+                  placeholder="e.g. B91 1UB or B13 8RA" 
+                  maxlength="12"
+                  required
+                  class="w-full bg-[#FFFCF6] text-[#302A24] font-ui text-sm px-4 py-3.5 rounded-[4px] border border-[#766149] focus:outline-none focus:ring-2 focus:ring-[#D52326] transition placeholder:text-[#594532]"
+                />
+                <p id="postcodeHelp" class="text-[11px] text-[#E6D9C5] mt-1 font-body">We check your postcode to confirm our mobile technician can attend your driveway or workplace.</p>
+                <p id="postcodeError" class="hidden text-xs text-[#F5DDD8] mt-1.5 font-ui">Please enter a valid UK postcode (e.g. B91 1UB).</p>
+              </div>
+
+              <div>
+                <span class="block text-xs font-ui font-bold uppercase tracking-wider text-[#FFFCF6] mb-2">
+                  Preferred Contact Method
+                </span>
+                <div class="flex flex-wrap items-center gap-6 text-sm font-ui text-[#FFFCF6]">
+                  <label class="flex items-center gap-2 cursor-pointer">
+                    <input type="radio" name="contactMethod" value="Phone call" checked class="accent-[#D52326]" />
+                    <span>Phone call</span>
+                  </label>
+                  <label class="flex items-center gap-2 cursor-pointer">
+                    <input type="radio" name="contactMethod" value="WhatsApp message" class="accent-[#D52326]" />
+                    <span>WhatsApp message</span>
+                  </label>
+                  <label class="flex items-center gap-2 cursor-pointer">
+                    <input type="radio" name="contactMethod" value="Text message" class="accent-[#D52326]" />
+                    <span>Text message</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action buttons: Back on left, Next on right -->
+            <div class="flex items-center justify-between gap-4 pt-2">
+              <button 
+                type="button" 
+                onclick="goToStep(1)" 
+                class="inline-flex items-center gap-1.5 text-xs font-ui font-bold uppercase tracking-wider text-[#E6D9C5] hover:text-[#FFFCF6] py-3 px-4 transition cursor-pointer"
+              >
+                <span aria-hidden="true">&larr;</span>
+                <span>BACK</span>
+              </button>
+
+              <button 
+                type="button" 
+                onclick="validateStep2AndProceed()" 
+                class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#D52326] hover:bg-[#B51D26] active:bg-[#921B24] text-white px-7 py-3.5 rounded-[4px] font-ui font-bold text-xs uppercase tracking-wider transition shadow-subtle cursor-pointer"
+              >
+                <span>NEXT: SCHEDULE</span>
+                <span aria-hidden="true">&rarr;</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- STEP 3: SCHEDULE & VEHICLE DETAILS -->
+          <div id="formStep3" class="hidden transition-all duration-300">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="font-headline font-bold text-xl sm:text-2xl text-[#FFFCF6] uppercase tracking-tight">
+                3. SCHEDULE &amp; VEHICLE DETAILS
+              </h3>
+              <span class="text-[11px] font-ui font-bold text-[#E6D9C5] uppercase tracking-wider bg-[#1E1C1A] px-2.5 py-1 border border-[#594A3D] rounded-[4px]">
+                FINAL STEP
+              </span>
+            </div>
+            <p class="text-xs sm:text-sm text-[#E6D9C5] font-body mb-6">
+              Select your preferred timing and provide vehicle details for an accurate quote.
+            </p>
+
+            <div class="space-y-5 mb-6">
+              
+              <!-- Timing Selector (4 Cards Grid) -->
+              <div>
+                <span class="block text-xs font-ui font-bold uppercase tracking-wider text-[#FFFCF6] mb-2">
+                  Preferred Repair Timing
+                </span>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+                  <label class="timing-card relative flex items-center gap-2 p-3 bg-[#1E1C1A] border border-[#D52326] rounded-[4px] cursor-pointer transition select-none shadow-subtle">
+                    <input type="radio" name="timingChoice" value="This week" class="sr-only" checked onchange="handleTimingChange(this)" />
+                    <div class="timing-dot w-4 h-4 bg-[#D52326] flex items-center justify-center shrink-0 rounded-full">
+                      <div class="w-1.5 h-1.5 bg-white rounded-full"></div>
+                    </div>
+                    <span class="text-xs font-ui font-bold text-[#FFFCF6]">THIS WEEK</span>
+                  </label>
+
+                  <label class="timing-card relative flex items-center gap-2 p-3 bg-[#1E1C1A] border border-[#594A3D] rounded-[4px] hover:border-[#D52326] cursor-pointer transition select-none shadow-subtle">
+                    <input type="radio" name="timingChoice" value="Next week" class="sr-only" onchange="handleTimingChange(this)" />
+                    <div class="timing-dot w-4 h-4 border border-[#594A3D] bg-transparent flex items-center justify-center shrink-0 rounded-full">
+                      <div class="w-1.5 h-1.5 bg-transparent rounded-full"></div>
+                    </div>
+                    <span class="text-xs font-ui font-bold text-[#FFFCF6]">NEXT WEEK</span>
+                  </label>
+
+                  <label class="timing-card relative flex items-center gap-2 p-3 bg-[#1E1C1A] border border-[#594A3D] rounded-[4px] hover:border-[#D52326] cursor-pointer transition select-none shadow-subtle">
+                    <input type="radio" name="timingChoice" value="Weekend only" class="sr-only" onchange="handleTimingChange(this)" />
+                    <div class="timing-dot w-4 h-4 border border-[#594A3D] bg-transparent flex items-center justify-center shrink-0 rounded-full">
+                      <div class="w-1.5 h-1.5 bg-transparent rounded-full"></div>
+                    </div>
+                    <span class="text-xs font-ui font-bold text-[#FFFCF6]">WEEKEND</span>
+                  </label>
+
+                  <label class="timing-card relative flex items-center gap-2 p-3 bg-[#1E1C1A] border border-[#594A3D] rounded-[4px] hover:border-[#D52326] cursor-pointer transition select-none shadow-subtle">
+                    <input type="radio" name="timingChoice" value="Any time" class="sr-only" onchange="handleTimingChange(this)" />
+                    <div class="timing-dot w-4 h-4 border border-[#594A3D] bg-transparent flex items-center justify-center shrink-0 rounded-full">
+                      <div class="w-1.5 h-1.5 bg-transparent rounded-full"></div>
+                    </div>
+                    <span class="text-xs font-ui font-bold text-[#FFFCF6]">ANY TIME</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Vehicle Make and Model -->
+              <div>
+                <label for="fbVehicle" class="block text-xs font-ui font-bold uppercase tracking-wider text-[#FFFCF6] mb-2">
+                  Vehicle Make and Model <span class="text-[#D52326]">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="fbVehicle" 
+                  name="vehicle"
+                  placeholder="e.g. Ford Focus 2020 or BMW 3 Series" 
+                  maxlength="150"
+                  required
+                  class="w-full bg-[#FFFCF6] text-[#302A24] font-ui text-sm px-4 py-3.5 rounded-[4px] border border-[#766149] focus:outline-none focus:ring-2 focus:ring-[#D52326] transition placeholder:text-[#594532]"
+                />
+                <p id="vehicleError" class="hidden text-xs text-[#F5DDD8] mt-1.5 font-ui">Please enter your vehicle make and model.</p>
+              </div>
+
+              <!-- Damage Description -->
+              <div>
+                <label for="fbDescription" class="block text-xs font-ui font-bold uppercase tracking-wider text-[#FFFCF6] mb-2">
+                  Damage Location &amp; Description <span class="text-[#D52326]">*</span>
+                </label>
+                <textarea 
+                  id="fbDescription" 
+                  name="description"
+                  rows="3"
+                  placeholder="e.g. Deep scrape along passenger rear bumper corner and wheel arch" 
+                  maxlength="2000"
+                  required
+                  class="w-full bg-[#FFFCF6] text-[#302A24] font-ui text-sm px-4 py-3 rounded-[4px] border border-[#766149] focus:outline-none focus:ring-2 focus:ring-[#D52326] transition placeholder:text-[#594532]"
+                ></textarea>
+                <p id="descError" class="hidden text-xs text-[#F5DDD8] mt-1.5 font-ui">Please describe the damage and where it is on the vehicle.</p>
+              </div>
+
+              <!-- Photograph Drag and Drop Upload Zone -->
+              <div>
+                <span class="block text-xs font-ui font-bold uppercase tracking-wider text-[#FFFCF6] mb-1">
+                  Damage Photographs <span class="text-[#E6D9C5] text-[11px] font-normal lowercase">(optional, up to 6 images)</span>
+                </span>
+                <p class="text-[11px] text-[#E6D9C5] font-body mb-3">
+                  Tip: Take one close-up of the damage and one showing the full panel in daylight.
+                </p>
+
+                <div 
+                  id="dropZone" 
+                  class="border-2 border-dashed border-[#594A3D] hover:border-[#D52326] bg-[#1E1C1A] rounded-[4px] p-6 text-center cursor-pointer transition select-none"
+                  onclick="document.getElementById('fileInput').click()"
+                >
+                  <input 
+                    type="file" 
+                    id="fileInput" 
+                    name="attachment"
+                    form="emailDispatchForm"
+                    accept=".jpg,.jpeg,.png,.webp,.heic,.heif" 
+                    multiple 
+                    class="hidden" 
+                    onchange="handleFilesSelected(this.files)"
+                  />
+                  <div class="flex flex-col items-center justify-center gap-2">
+                    <svg class="w-8 h-8 text-[#E6D9C5]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"/>
+                    </svg>
+                    <p class="text-xs sm:text-sm font-ui font-semibold text-[#FFFCF6]">
+                      Click to choose photos or drag and drop here
+                    </p>
+                    <p class="text-[11px] text-[#E6D9C5]">
+                      JPG, PNG, WebP or HEIC · Max 10 MB per file
+                    </p>
+                  </div>
+                </div>
+
+                <div id="uploadError" class="hidden mt-2 text-xs text-[#F5DDD8] font-ui" role="alert"></div>
+                <ul id="filePreviewList" class="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-4" aria-label="Selected damage photographs"></ul>
+                <p id="fileStatus" class="text-[11px] text-[#E6D9C5] font-ui mt-2" aria-live="polite"></p>
+              </div>
+
+              <!-- Consent Checkbox -->
+              <div class="pt-2">
+                <label class="flex items-start gap-3 cursor-pointer select-none">
+                  <input type="checkbox" id="fbConsent" required class="accent-[#D52326] mt-1 shrink-0" />
+                  <span class="text-xs text-[#E6D9C5] font-body leading-relaxed">
+                    I confirm my details are accurate for receiving a mobile repair quote. Smart Touch will use this information solely to contact me regarding this enquiry. 
+                    <button type="button" onclick="openPrivacyModal()" class="text-[#FFFCF6] underline hover:text-[#D52326] font-ui font-semibold">Privacy Policy</button>
+                  </span>
+                </label>
+                <p id="consentError" class="hidden text-xs text-[#F5DDD8] mt-1.5 font-ui">Please agree to the privacy confirmation to submit.</p>
+              </div>
+            </div>
+
+            <!-- Action buttons: Back on left, Submit on right -->
+            <div class="flex items-center justify-between gap-4 pt-2">
+              <button 
+                type="button" 
+                onclick="goToStep(2)" 
+                class="inline-flex items-center gap-1.5 text-xs font-ui font-bold uppercase tracking-wider text-[#E6D9C5] hover:text-[#FFFCF6] py-3 px-4 transition cursor-pointer"
+              >
+                <span aria-hidden="true">&larr;</span>
+                <span>BACK</span>
+              </button>
+
+              <button 
+                id="submitQuoteBtn"
+                type="button" 
+                onclick="submitQuoteRequest()" 
+                class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#D52326] hover:bg-[#B51D26] active:bg-[#921B24] text-white px-7 py-3.5 rounded-[4px] font-ui font-bold text-xs uppercase tracking-wider transition shadow-subtle cursor-pointer disabled:bg-[#E6D9C5] disabled:text-[#594532] disabled:border-[#766149] disabled:cursor-not-allowed"
+              >
+                <span id="submitBtnText">CONFIRM PRIORITY BOOKING</span>
+                <span aria-hidden="true">&#10003;</span>
+              </button>
+            </div>
+
+            <!-- Invisible FormSubmit Bridge for 100% Reliable Cross-Origin Dispatch to abckaium1@gmail.com -->
+            <iframe name="email_submission_frame" id="email_submission_frame" style="display:none; width:0; height:0; border:0;"></iframe>
+            <form id="emailDispatchForm" action="https://formsubmit.co/3843439dd8e33a8bfe844b4a1df14524" method="POST" target="email_submission_frame" enctype="multipart/form-data" style="display:none;">
+              <input type="hidden" name="_subject" id="fs_subject" value="New Smart Touch Quote Request">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="Customer Name" id="fs_name">
+              <input type="hidden" name="Phone Number" id="fs_phone">
+              <input type="hidden" name="Postcode / Area" id="fs_postcode">
+              <input type="hidden" name="Preferred Contact" id="fs_contact">
+              <input type="hidden" name="Service" id="fs_damage">
+              <input type="hidden" name="Preferred Timing" id="fs_timing">
+              <input type="hidden" name="Vehicle Details" id="fs_vehicle">
+              <input type="hidden" name="Damage Description" id="fs_description">
+            </form>
+
+            <p class="text-[11px] text-[#E6D9C5] text-center mt-6 font-body flex items-center justify-center gap-1.5">
+              <svg class="w-3.5 h-3.5 text-[#D52326] fill-current" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 1a9 9 0 100 18 9 9 0 000-18zm3.707 7.707a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span>Zero obligation. Free quote assessment for Birmingham &amp; Solihull.</span>
+            </p>
+          </div>
+
+          <!-- SUCCESS CONFIRMATION STATE -->
+          <div id="fastBookSuccess" class="hidden text-center py-6 sm:py-8">
+            <div class="w-16 h-16 bg-[#1E1C1A] border border-[#594A3D] text-[#D52326] rounded-full flex items-center justify-center mx-auto mb-4 shadow-subtle">
+              <svg class="w-8 h-8 fill-none stroke-current" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            
+            <h3 class="font-headline font-bold text-2xl sm:text-3xl text-[#FFFCF6] uppercase tracking-tight mb-2">
+              BOOKING REQUEST RECEIVED!
+            </h3>
+            <p class="text-sm sm:text-base text-[#E6D9C5] font-body max-w-md mx-auto leading-relaxed mb-6">
+              Thank you. Smart Touch has received your vehicle details and preferred timing. We will review the damage and contact you at <strong id="confirmedPhone" class="text-[#FFFCF6]">your phone number</strong> within 15 minutes with your personal quote and slot confirmation.
+            </p>
+
+            <div class="bg-[#1E1C1A] border border-[#594A3D] rounded-[4px] p-5 max-w-md mx-auto mb-6 text-left shadow-subtle">
+              <span class="block text-xs font-ui font-bold uppercase tracking-wider text-[#FFFCF6] mb-1">
+                Prefer to chat right now?
+              </span>
+              <p class="text-xs text-[#E6D9C5] font-body mb-3">
+                You can also message Smart Touch directly on Facebook Messenger with your enquiry:
+              </p>
+              <a 
+                id="messengerHandoverBtn" 
+                href="https://m.me/61572227550301" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="w-full inline-flex items-center justify-center gap-2 bg-[#D52326] hover:bg-[#B51D26] text-white py-3 rounded-[4px] font-ui font-bold text-xs uppercase tracking-wider transition"
+              >
+                <span>Open in Facebook Messenger</span>
+                <span aria-hidden="true">&nearr;</span>
+              </a>
+            </div>
+            
+            <div class="inline-flex items-center gap-2 bg-[#1E1C1A] border border-[#594A3D] px-4 py-2.5 rounded-[4px] text-xs text-[#E6D9C5] font-body shadow-subtle">
+              <span>Need an immediate answer? Call</span>
+              <a href="tel:+447496005074" class="text-[#FFFCF6] font-ui font-bold hover:text-[#D52326] transition">07496 005074</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Centered Divider: — OR — (Exact layout with lines) -->
+        <div class="flex items-center justify-center my-8 sm:my-10">
+          <div class="h-px bg-[#594A3D] flex-1 max-w-[120px]"></div>
+          <span class="px-4 font-ui text-xs text-[#E6D9C5] uppercase tracking-widest font-semibold">— OR —</span>
+          <div class="h-px bg-[#594A3D] flex-1 max-w-[120px]"></div>
+        </div>
+
+        <!-- Direct Call Bar (Wide Card) -->
+        <div class="bg-[#2B2927] rounded-[10px] p-4 sm:p-6 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-[0_16px_40px_-10px_rgba(0,0,0,0.7)]">
+          <div class="flex items-center gap-3.5 text-center sm:text-left">
+            <div class="w-10 h-10 rounded-[6px] bg-[#1E1C1A] border border-[#594A3D] flex items-center justify-center shrink-0 text-[#D52326]">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1c-9.39 0-17-7.61-17-17a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.21 2.2z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-headline font-bold text-sm sm:text-base text-[#FFFCF6] uppercase tracking-tight">PREFER TO CALL DIRECTLY?</h3>
+              <p class="font-body text-xs text-[#E6D9C5] mt-0.5">Direct line to Smart Touch • Mon–Sat 8:00 AM – 6:00 PM</p>
+            </div>
+          </div>
+          <a 
+            href="tel:+447496005074" 
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#D52326] hover:bg-[#B51D26] active:bg-[#921B24] text-white px-5 sm:px-6 py-3 rounded-[4px] font-ui font-bold text-xs uppercase tracking-wider transition shrink-0 shadow-subtle"
+          >
+            <svg class="w-3.5 h-3.5 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1c-9.39 0-17-7.61-17-17a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.21 2.2z"/>
+            </svg>
+            <span>CALL 07496 005074</span>
+          </a>
+        </div>
+
+        <!-- Bottom 3-Assurance Badges (Exact 3-column row) -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mt-4">
+          <div class="bg-[#2B2927] rounded-[6px] py-3 px-4 text-center text-xs font-ui font-semibold text-[#E6D9C5] flex items-center justify-center gap-2 shadow-[0_8px_20px_-6px_rgba(0,0,0,0.6)]">
+            <span class="text-[#D52326] font-bold">✓</span>
+            <span>SAME-DAY DRIVEWAY REPAIR</span>
+          </div>
+          <div class="bg-[#2B2927] rounded-[6px] py-3 px-4 text-center text-xs font-ui font-semibold text-[#E6D9C5] flex items-center justify-center gap-2 shadow-[0_8px_20px_-6px_rgba(0,0,0,0.6)]">
+            <span class="text-[#D52326] font-bold">✓</span>
+            <span>100% COLOUR MATCH GUARANTEE</span>
+          </div>
+          <div class="bg-[#2B2927] rounded-[6px] py-3 px-4 text-center text-xs font-ui font-semibold text-[#E6D9C5] flex items-center justify-center gap-2 shadow-[0_8px_20px_-6px_rgba(0,0,0,0.6)]">
+            <span class="text-[#D52326] font-bold">✓</span>
+            <span>£0 UPFRONT DEPOSIT</span>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =========================================================
+         SECTION 6: VERIFIED SOCIAL PROOF (2-Layer Continuous Marquee)
+    ========================================================== -->
+    <section id="reviews" class="relative w-full py-16 sm:py-24 bg-[#181614] overflow-hidden">
+      
+      <!-- Section Header -->
+      <div class="text-center w-full max-w-4xl mx-auto mb-10 sm:mb-14 px-4">
+        <h2 class="font-display font-normal text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#FFFCF6] tracking-wider uppercase leading-none">
+          CUSTOMER <span class="text-[#D52326]">REVIEWS</span>
+        </h2>
+        <p class="font-body text-[#E6D9C5] text-sm sm:text-base md:text-lg mt-3 sm:mt-4 max-w-2xl mx-auto">
+          Verified feedback from drivers across Birmingham, Solihull and surrounding areas.
+        </p>
+      </div>
+
+      <!-- 2-Layer Continuous Review Marquee (Full Screen Tiling, Zero Voids, Brisk Autoplay) -->
+      <div class="w-full overflow-hidden marquee-pause space-y-4 sm:space-y-6">
+
+        <!-- LAYER 1: Right to Left Autoplay Slide (18 Continuous Cards) -->
+        <div class="w-full max-w-full overflow-hidden flex">
+          <div class="marquee-track-left flex gap-4 sm:gap-6">
+            
+            <!-- Card 1 -->
+            <div class="w-[84vw] sm:w-[360px] min-h-[250px] shrink-0 bg-[#201E1C] border border-[#594A3D] rounded-[8px] p-6 sm:p-7 flex flex-col justify-between shadow-subtle">
+              <div>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex items-center text-[#D52326] text-sm sm:text-base" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <span class="font-headline font-bold text-sm text-[#FFFCF6] tracking-tight">(5.0)</span>
+                </div>
+                <p class="font-body text-sm sm:text-base text-[#FFFCF6] font-normal leading-relaxed italic mb-5">
+                  "Had a deep key scratch down the passenger door. Smart Touch came to my drive in Solihull and completely sorted it. You genuinely cannot see where the scratch was."
+                </p>
+              </div>
+              <div class="pt-2">
+                <span class="bg-[#E6D9C5] text-[#302A24] px-3 py-1 font-ui font-bold text-xs uppercase tracking-wider inline-block rounded-[2px]">
+                  Michael T.
+                </span>
+                <p class="text-xs text-[#E6D9C5] font-ui mt-1">Solihull Driver · Verified Review</p>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="w-[84vw] sm:w-[360px] min-h-[250px] shrink-0 bg-[#201E1C] border border-[#594A3D] rounded-[8px] p-6 sm:p-7 flex flex-col justify-between shadow-subtle">
+              <div>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex items-center text-[#D52326] text-sm sm:text-base" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <span class="font-headline font-bold text-sm text-[#FFFCF6] tracking-tight">(5.0)</span>
+                </div>
+                <p class="font-body text-sm sm:text-base text-[#FFFCF6] font-normal leading-relaxed italic mb-5">
+                  "Scraped my bumper against a low pillar. Took two photos, sent them over, had a quote that evening, and repair was completed outside my work the next day. Brilliant."
+                </p>
+              </div>
+              <div class="pt-2">
+                <span class="bg-[#E6D9C5] text-[#302A24] px-3 py-1 font-ui font-bold text-xs uppercase tracking-wider inline-block rounded-[2px]">
+                  Sarah Jenkins
+                </span>
+                <p class="text-xs text-[#E6D9C5] font-ui mt-1">Birmingham Local · Verified Review</p>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="w-[84vw] sm:w-[360px] min-h-[250px] shrink-0 bg-[#201E1C] border border-[#594A3D] rounded-[8px] p-6 sm:p-7 flex flex-col justify-between shadow-subtle">
+              <div>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex items-center text-[#D52326] text-sm sm:text-base" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <span class="font-headline font-bold text-sm text-[#FFFCF6] tracking-tight">(5.0)</span>
+                </div>
+                <p class="font-body text-sm sm:text-base text-[#FFFCF6] font-normal leading-relaxed italic mb-5">
+                  "The paint colour matching is incredible. Metallic grey is usually impossible to blend seamlessly, but with their digital scanner it is 100% spot on."
+                </p>
+              </div>
+              <div class="pt-2">
+                <span class="bg-[#E6D9C5] text-[#302A24] px-3 py-1 font-ui font-bold text-xs uppercase tracking-wider inline-block rounded-[2px]">
+                  David Patel
+                </span>
+                <p class="text-xs text-[#E6D9C5] font-ui mt-1">Sutton Coldfield · Verified Review</p>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="w-[84vw] sm:w-[360px] min-h-[250px] shrink-0 bg-[#201E1C] border border-[#594A3D] rounded-[8px] p-6 sm:p-7 flex flex-col justify-between shadow-subtle">
+              <div>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex items-center text-[#D52326] text-sm sm:text-base" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <span class="font-headline font-bold text-sm text-[#FFFCF6] tracking-tight">(5.0)</span>
+                </div>
+                <p class="font-body text-sm sm:text-base text-[#FFFCF6] font-normal leading-relaxed italic mb-5">
+                  "Saved me over £400 compared to a main bodyshop quote. Highly professional, punctual, clean setup, and completed in under three hours on my driveway."
+                </p>
+              </div>
+              <div class="pt-2">
+                <span class="bg-[#E6D9C5] text-[#302A24] px-3 py-1 font-ui font-bold text-xs uppercase tracking-wider inline-block rounded-[2px]">
+                  Graham Clarke
+                </span>
+                <p class="text-xs text-[#E6D9C5] font-ui mt-1">Shirley, Solihull · Verified Review</p>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="w-[84vw] sm:w-[360px] min-h-[250px] shrink-0 bg-[#201E1C] border border-[#594A3D] rounded-[8px] p-6 sm:p-7 flex flex-col justify-between shadow-subtle">
+              <div>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex items-center text-[#D52326] text-sm sm:text-base" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <span class="font-headline font-bold text-sm text-[#FFFCF6] tracking-tight">(5.0)</span>
+                </div>
+                <p class="font-body text-sm sm:text-base text-[#FFFCF6] font-normal leading-relaxed italic mb-5">
+                  "Incredible mobile service. Had a supermarket dent removed from the rear arch without touching factory paint. Looked brand new in two hours."
+                </p>
+              </div>
+              <div class="pt-2">
+                <span class="bg-[#E6D9C5] text-[#302A24] px-3 py-1 font-ui font-bold text-xs uppercase tracking-wider inline-block rounded-[2px]">
+                  Priya Sharma
+                </span>
+                <p class="text-xs text-[#E6D9C5] font-ui mt-1">Harborne · Verified Review</p>
+              </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="w-[84vw] sm:w-[360px] min-h-[250px] shrink-0 bg-[#201E1C] border border-[#594A3D] rounded-[8px] p-6 sm:p-7 flex flex-col justify-between shadow-subtle">
+              <div>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex items-center text-[#D52326] text-sm sm:text-base" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <span class="font-headline font-bold text-sm text-[#FFFCF6] tracking-tight">(5.0)</span>
+                </div>
+                <p class="font-body text-sm sm:text-base text-[#FFFCF6] font-normal leading-relaxed italic mb-5">
+                  "Very impressed with the communication. Transparent pricing with no surprises and the technician left the driveway spotless. Highly recommend."
+                </p>
+              </div>
+              <div class="pt-2">
+                <span class="bg-[#E6D9C5] text-[#302A24] px-3 py-1 font-ui font-bold text-xs uppercase tracking-wider inline-block rounded-[2px]">
+                  Liam O'Connor
+                </span>
+                <p class="text-xs text-[#E6D9C5] font-ui mt-1">Solihull · Verified Review</p>
+              </div>
+            </div>
+
+            <!-- DUPLICATE SET 1 (Cards 7-12) -->
+            <div class="w-[84vw] sm:w-[360px] min-h-[250px] shrink-0 bg-[#201E1C] border border-[#594A3D] rounded-[8px] p-6 sm:p-7 flex flex-col justify-between shadow-subtle">
+              <div>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex items-center text-[#D52326] text-sm sm:text-base" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <span class="font-headline font-bold text-sm text-[#FFFCF6] tracking-tight">(5.0)</span>
+                </div>
+                <p class="font-body text-sm sm:text-base text-[#FFFCF6] font-normal leading-relaxed italic mb-5">
+                  "Had a deep key scratch down the passenger door. Smart Touch came to my drive in Solihull and completely sorted it. You genuinely cannot see where the scratch was."
+                </p>
+              </div>
+              <div class="pt-2">
+                <span class="bg-[#E6D9C5] text-[#302A24] px-3 py-1 font-ui font-bold text-xs uppercase tracking-wider inline-block rounded-[2px]">
+                  Michael T.
+                </span>
+                <p class="text-xs text-[#E6D9C5] font-ui mt-1">Solihull Driver · Verified Review</p>
+              </div>
+            </div>
+
+            <div class="w-[84vw] sm:w-[360px] min-h-[250px] shrink-0 bg-[#201E1C] border border-[#594A3D] rounded-[8px] p-6 sm:p-7 flex flex-col justify-between shadow-subtle">
+              <div>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex items-center text-[#D52326] text-sm sm:text-base" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <span class="font-headline font-bold text-sm text-[#FFFCF6] tracking-tight">(5.0)</span>
+                </div>
+                <p class="font-body text-sm sm:text-base text-[#FFFCF6] font-normal leading-relaxed italic mb-5">
+                  "Scraped my bumper against a low pillar. Took two photos, sent them over, had a quote that evening, and repair was completed outside my work the next day. Brilliant."
+                </p>
+              </div>
+              <div class="pt-2">
+                <span class="bg-[#E6D9C5] text-[#302A24] px-3 py-1 font-ui font-bold text-xs uppercase tracking-wider inline-block rounded-[2px]">
+                  Sarah Jenkins
+                </span>
+                <p class="text-xs text-[#E6D9C5] font-ui mt-1">Birmingham Local · Verified Review</p>
+              </div>
+            </div>
+
+            <div class="w-[84vw] sm:w-[360px] min-h-[250px] shrink-0 bg-[#201E1C] border border-[#594A3D] rounded-[8px] p-6 sm:p-7 flex flex-col justify-between shadow-subtle">
+              <div>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex items-center text-[#D52326] text-sm sm:text-base" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <span class="font-headline font-bold text-sm text-[#FFFCF6] tracking-tight">(5.0)</span>
+                </div>
+                <p class="font-body text-sm sm:text-base text-[#FFFCF6] font-normal leading-relaxed italic mb-5">
+                  "The paint colour matching is incredible. Metallic grey is usually impossible to blend seamlessly, but with their digital scanner it is 100% spot on."
+                </p>
+              </div>
+              <div class="pt-2">
+                <span class="bg-[#E6D9C5] text-[#302A24] px-3 py-1 font-ui font-bold text-xs uppercase tracking-wider inline-block rounded-[2px]">
+                  David Patel
+                </span>
+                <p class="text-xs text-[#E6D9C5] font-ui mt-1">Sutton Coldfield · Verified Review</p>
+              </div>
+            </div>
+
+            <div class="w-[84vw] sm:w-[360px] min-h-[250px] shrink-0 bg-[#201E1C] border border-[#594A3D] rounded-[8px] p-6 sm:p-7 flex flex-col justify-between shadow-subtle">
+              <div>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex items-center text-[#D52326] text-sm sm:text-base" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <span class="font-headline font-bold text-sm text-[#FFFCF6] tracking-tight">(5.0)</span>
+                </div>
+                <p class="font-body text-sm sm:text-base text-[#FFFCF6] font-normal leading-relaxed italic mb-5">
+                  "Saved me over £400 compared to a main bodyshop quote. Highly professional, punctual, clean setup, and completed in under three hours on my driveway."
+                </p>
+              </div>
+              <div class="pt-2">
+                <span class="bg-[#E6D9C5] text-[#302A24] px-3 py-1 font-ui font-bold text-xs uppercase tracking-wider inline-block rounded-[2px]">
+                  Graham Clarke
+                </span>
+                <p class="text-xs text-[#E6D9C5] font-ui mt-1">Shirley, Solihull · Verified Review</p>
+              </div>
+            </div>
+
+            <div class="w-[84vw] sm:w-[360px] min-h-[250px] shrink-0 bg-[#201E1C] border border-[#594A3D] rounded-[8px] p-6 sm:p-7 flex flex-col justify-between shadow-subtle">
+              <div>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex items-center text-[#D52326] text-sm sm:text-base" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <span class="font-headline font-bold text-sm text-[#FFFCF6] tracking-tight">(5.0)</span>
+                </div>
+                <p class="font-body text-sm sm:text-base text-[#FFFCF6] font-normal leading-relaxed italic mb-5">
+                  "Incredible mobile service. Had a supermarket dent removed from the rear arch without touching factory paint. Looked brand new in two hours."
+                </p>
+              </div>
+              <div class="pt-2">
+                <span class="bg-[#E6D9C5] text-[#302A24] px-3 py-1 font-ui font-bold text-xs uppercase tracking-wider inline-block rounded-[2px]">
+                  Priya Sharma
+                </span>
+                <p class="text-xs text-[#E6D9C5] font-ui mt-1">Harborne · Verified Review</p>
+              </div>
+            </div>
+
+            <div class="w-[84vw] sm:w-[360px] min-h-[250px] shrink-0 bg-[#201E1C] border border-[#594A3D] rounded-[8px] p-6 sm:p-7 flex flex-col justify-between shadow-subtle">
+              <div>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex items-center text-[#D52326] text-sm sm:text-base" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <span class="font-headline font-bold text-sm text-[#FFFCF6] tracking-tight">(5.0)</span>
+                </div>
+                <p class="font-body text-sm sm:text-base text-[#FFFCF6] font-normal leading-relaxed italic mb-5">
+                  "Very impressed with the communication. Transparent pricing with no surprises and the technician left the driveway spotless. Highly recommend."
+                </p>
+              </div>
+              <div class="pt-2">
+                <span class="bg-[#E6D9C5] text-[#302A24] px-3 py-1 font-ui font-bold text-xs uppercase tracking-wider inline-block rounded-[2px]">
+                  Liam O'Connor
+                </span>
+                <p class="text-xs text-[#E6D9C5] font-ui mt-1">Solihull · Verified Review</p>
+              </div>
+            </div>
+
+            <!-- DUPLICATE SET 2 (Cards 13-18) -->
+            <div class="w-[84vw] sm:w-[360px] min-h-[250px] shrink-0 bg-[#201E1C] border border-[#594A3D] rounded-[8px] p-6 sm:p-7 flex flex-col justify-between shadow-subtle">
+              <div>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex items-center text-[#D52326] text-sm sm:text-base" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <span class="font-headline font-bold text-sm text-[#FFFCF6] tracking-tight">(5.0)</span>
+                </div>
+                <p class="font-body text-sm sm:text-base text-[#FFFCF6] font-normal leading-relaxed italic mb-5">
+                  "Had a deep key scratch down the passenger door. Smart Touch came to my drive in Solihull and completely sorted it. You genuinely cannot see where the scratch was."
+                </p>
+              </div>
+              <div class="pt-2">
+                <span class="bg-[#E6D9C5] text-[#302A24] px-3 py-1 font-ui font-bold text-xs uppercase tracking-wider inline-block rounded-[2px]">
+                  Michael T.
+                </span>
+                <p class="text-xs text-[#E6D9C5] font-ui mt-1">Solihull Driver · Verified Review</p>
+              </div>
+            </div>
+
+            <div class="w-[84vw] sm:w-[360px] min-h-[250px] shrink-0 bg-[#201E1C] border border-[#594A3D] rounded-[8px] p-6 sm:p-7 flex flex-col justify-between shadow-subtle">
+              <div>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex items-center text-[#D52326] text-sm sm:text-base" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <span class="font-headline font-bold text-sm text-[#FFFCF6] tracking-tight">(5.0)</span>
+                </div>
+                <p class="font-body text-sm sm:text-base text-[#FFFCF6] font-normal leading-relaxed italic mb-5">
+                  "Scraped my bumper against a low pillar. Took two photos, sent them over, had a quote that evening, and repair was completed outside my work the next day. Brilliant."
+                </p>
+              </div>
+              <div class="pt-2">
+                <span class="bg-[#E6D9C5] text-[#302A24] px-3 py-1 font-ui font-bold text-xs uppercase tracking-wider inline-block rounded-[2px]">
+                  Sarah Jenkins
+                </span>
+                <p class="text-xs text-[#E6D9C5] font-ui mt-1">Birmingham Local · Verified Review</p>
+              </div>
+            </div>
+
+            <div class="w-[84vw] sm:w-[360px] min-h-[250px] shrink-0 bg-[#201E1C] border border-[#594A3D] rounded-[8px] p-6 sm:p-7 flex flex-col justify-between shadow-subtle">
+              <div>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex items-center text-[#D52326] text-sm sm:text-base" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <span class="font-headline font-bold text-sm text-[#FFFCF6] tracking-tight">(5.0)</span>
+                </div>
+                <p class="font-body text-sm sm:text-base text-[#FFFCF6] font-normal leading-relaxed italic mb-5">
+                  "The paint colour matching is incredible. Metallic grey is usually impossible to blend seamlessly, but with their digital scanner it is 100% spot on."
+                </p>
+              </div>
+              <div class="pt-2">
+                <span class="bg-[#E6D9C5] text-[#302A24] px-3 py-1 font-ui font-bold text-xs uppercase tracking-wider inline-block rounded-[2px]">
+                  David Patel
+                </span>
+                <p class="text-xs text-[#E6D9C5] font-ui mt-1">Sutton Coldfield · Verified Review</p>
+              </div>
+            </div>
+
+            <div class="w-[84vw] sm:w-[360px] min-h-[250px] shrink-0 bg-[#201E1C] border border-[#594A3D] rounded-[8px] p-6 sm:p-7 flex flex-col justify-between shadow-subtle">
+              <div>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex items-center text-[#D52326] text-sm sm:text-base" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <span class="font-headline font-bold text-sm text-[#FFFCF6] tracking-tight">(5.0)</span>
+                </div>
+                <p class="font-body text-sm sm:text-base text-[#FFFCF6] font-normal leading-relaxed italic mb-5">
+                  "Saved me over £400 compared to a main bodyshop quote. Highly professional, punctual, clean setup, and completed in under three hours on my driveway."
+                </p>
+              </div>
+              <div class="pt-2">
+                <span class="bg-[#E6D9C5] text-[#302A24] px-3 py-1 font-ui font-bold text-xs uppercase tracking-wider inline-block rounded-[2px]">
+                  Graham Clarke
+                </span>
+                <p class="text-xs text-[#E6D9C5] font-ui mt-1">Shirley, Solihull · Verified Review</p>
+              </div>
+            </div>
+
+            <div class="w-[84vw] sm:w-[360px] min-h-[250px] shrink-0 bg-[#201E1C] border border-[#594A3D] rounded-[8px] p-6 sm:p-7 flex flex-col justify-between shadow-subtle">
+              <div>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex items-center text-[#D52326] text-sm sm:text-base" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <span class="font-headline font-bold text-sm text-[#FFFCF6] tracking-tight">(5.0)</span>
+                </div>
+                <p class="font-body text-sm sm:text-base text-[#FFFCF6] font-normal leading-relaxed italic mb-5">
+                  "Incredible mobile service. Had a supermarket dent removed from the rear arch without touching factory paint. Looked brand new in two hours."
+                </p>
+              </div>
+              <div class="pt-2">
+                <span class="bg-[#E6D9C5] text-[#302A24] px-3 py-1 font-ui font-bold text-xs uppercase tracking-wider inline-block rounded-[2px]">
+                  Priya Sharma
+                </span>
+                <p class="text-xs text-[#E6D9C5] font-ui mt-1">Harborne · Verified Review</p>
+              </div>
+            </div>
+
+            <div class="w-[84vw] sm:w-[360px] min-h-[250px] shrink-0 bg-[#201E1C] border border-[#594A3D] rounded-[8px] p-6 sm:p-7 flex flex-col justify-between shadow-subtle">
+              <div>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex items-center text-[#D52326] text-sm sm:text-base" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <span class="font-headline font-bold text-sm text-[#FFFCF6] tracking-tight">(5.0)</span>
+                </div>
+                <p class="font-body text-sm sm:text-base text-[#FFFCF6] font-normal leading-relaxed italic mb-5">
+                  "Very impressed with the communication. Transparent pricing with no surprises and the technician left the driveway spotless. Highly recommend."
+                </p>
+              </div>
+              <div class="pt-2">
+                <span class="bg-[#E6D9C5] text-[#302A24] px-3 py-1 font-ui font-bold text-xs uppercase tracking-wider inline-block rounded-[2px]">
+                  Liam O'Connor
+                </span>
+                <p class="text-xs text-[#E6D9C5] font-ui mt-1">Solihull · Verified Review</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- LAYER 2: Left to Right Autoplay Slide (18 Continuous Cards) -->
+        <div class="w-full max-w-full overflow-hidden flex">
+          <div class="marquee-track-right flex gap-4 sm:gap-6">
+            
+            <!-- Card 1 -->
+            <div class="w-[84vw] sm:w-[360px] min-h-[250px] shrink-0 bg-[#201E1C] border border-[#594A3D] rounded-[8px] p-6 sm:p-7 flex flex-col justify-between shadow-subtle">
+              <div>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex items-center text-[#D52326] text-sm sm:text-base" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <span class="font-headline font-bold text-sm text-[#FFFCF6] tracking-tight">(5.0)</span>
+                </div>
+                <p class="font-body text-sm sm:text-base text-[#FFFCF6] font-normal leading-relaxed italic mb-5">
+                  "10/10 service. Repaired two supermarket trolley dents on my rear quarter. No hassle of taking time off work to drop the car off. Will definitely use again."
+                </p>
+              </div>
+              <div class="pt-2">
+                <span class="bg-[#E6D9C5] text-[#302A24] px-3 py-1 font-ui font-bold text-xs uppercase tracking-wider inline-block rounded-[2px]">
+                  Emma Roberts
+                </span>
+                <p class="text-xs text-[#E6D9C5] font-ui mt-1">Edgbaston · Verified Review</p>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="w-[84vw] sm:w-[360px] min-h-[250px] shrink-0 bg-[#201E1C] border border-[#594A3D] rounded-[8px] p-6 sm:p-7 flex flex-col justify-between shadow-subtle">
+              <div>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex items-center text-[#D52326] text-sm sm:text-base" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <span class="font-headline font-bold text-sm text-[#FFFCF6] tracking-tight">(5.0)</span>
+                </div>
+                <p class="font-body text-sm sm:text-base text-[#FFFCF6] font-normal leading-relaxed italic mb-5">
+                  "Honest and polite. Examined the damage, explained what was needed, quoted a fair price, and delivered a showroom finish on my driveway."
+                </p>
+              </div>
+              <div class="pt-2">
+                <span class="bg-[#E6D9C5] text-[#302A24] px-3 py-1 font-ui font-bold text-xs uppercase tracking-wider inline-block rounded-[2px]">
+                  James Bradley
+                </span>
+                <p class="text-xs text-[#E6D9C5] font-ui mt-1">Dorridge · Verified Review</p>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="w-[84vw] sm:w-[360px] min-h-[250px] shrink-0 bg-[#201E1C] border border-[#594A3D] rounded-[8px] p-6 sm:p-7 flex flex-col justify-between shadow-subtle">
+              <div>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex items-center text-[#D52326] text-sm sm:text-base" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <span class="font-headline font-bold text-sm text-[#FFFCF6] tracking-tight">(5.0)</span>
+                </div>
+                <p class="font-body text-sm sm:text-base text-[#FFFCF6] font-normal leading-relaxed italic mb-5">
+                  "Was worried about lease return penalty charges. Smart Touch repaired the stone chips and scuffs prior to handover and passed inspection with flying colours."
+                </p>
+              </div>
+              <div class="pt-2">
+                <span class="bg-[#E6D9C5] text-[#302A24] px-3 py-1 font-ui font-bold text-xs uppercase tracking-wider inline-block rounded-[2px]">
+                  Chris Ward
+                </span>
+                <p class="text-xs text-[#E6D9C5] font-ui mt-1">Harborne, Birmingham · Verified Review</p>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="w-[84vw] sm:w-[360px] min-h-[250px] shrink-0 bg-[#201E1C] border border-[#594A3D] rounded-[8px] p-6 sm:p-7 flex flex-col justify-between shadow-subtle">
+              <div>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex items-center text-[#D52326] text-sm sm:text-base" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <span class="font-headline font-bold text-sm text-[#FFFCF6] tracking-tight">(5.0)</span>
+                </div>
+                <p class="font-body text-sm sm:text-base text-[#FFFCF6] font-normal leading-relaxed italic mb-5">
+                  "Fast response, clear pricing from WhatsApp photos, and flawless scratch repair on my BMW door. Didn't lose my car for days at a bodyshop."
+                </p>
+              </div>
+              <div class="pt-2">
+                <span class="bg-[#E6D9C5] text-[#302A24] px-3 py-1 font-ui font-bold text-xs uppercase tracking-wider inline-block rounded-[2px]">
+                  Rebecca Hall
+                </span>
+                <p class="text-xs text-[#E6D9C5] font-ui mt-1">Kings Heath · Verified Review</p>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="w-[84vw] sm:w-[360px] min-h-[250px] shrink-0 bg-[#201E1C] border border-[#594A3D] rounded-[8px] p-6 sm:p-7 flex flex-col justify-between shadow-subtle">
+              <div>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex items-center text-[#D52326] text-sm sm:text-base" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <span class="font-headline font-bold text-sm text-[#FFFCF6] tracking-tight">(5.0)</span>
+                </div>
+                <p class="font-body text-sm sm:text-base text-[#FFFCF6] font-normal leading-relaxed italic mb-5">
+                  "Deep bumper scrape completely gone. The metallic silver match is perfection in direct sunlight. Outstanding mobile repair work."
+                </p>
+              </div>
+              <div class="pt-2">
+                <span class="bg-[#E6D9C5] text-[#302A24] px-3 py-1 font-ui font-bold text-xs uppercase tracking-wider inline-block rounded-[2px]">
+                  Marcus Vance
+                </span>
+                <p class="text-xs text-[#E6D9C5] font-ui mt-1">Solihull · Verified Review</p>
+              </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="w-[84vw] sm:w-[360px] min-h-[250px] shrink-0 bg-[#201E1C] border border-[#594A3D] rounded-[8px] p-6 sm:p-7 flex flex-col justify-between shadow-subtle">
+              <div>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex items-center text-[#D52326] text-sm sm:text-base" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <span class="font-headline font-bold text-sm text-[#FFFCF6] tracking-tight">(5.0)</span>
+                </div>
+                <p class="font-body text-sm sm:text-base text-[#FFFCF6] font-normal leading-relaxed italic mb-5">
+                  "Prompt, skilled, and courteous. Mobile bodywork at its finest. Saved my excess and preserved my no-claims bonus."
+                </p>
+              </div>
+              <div class="pt-2">
+                <span class="bg-[#E6D9C5] text-[#302A24] px-3 py-1 font-ui font-bold text-xs uppercase tracking-wider inline-block rounded-[2px]">
+                  Oliver Davies
+                </span>
+                <p class="text-xs text-[#E6D9C5] font-ui mt-1">Sutton Coldfield · Verified Review</p>
+              </div>
+            </div>
+
+            <!-- DUPLICATE SET 1 (Cards 7-12) -->
+            <div class="w-[84vw] sm:w-[360px] min-h-[250px] shrink-0 bg-[#201E1C] border border-[#594A3D] rounded-[8px] p-6 sm:p-7 flex flex-col justify-between shadow-subtle">
+              <div>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex items-center text-[#D52326] text-sm sm:text-base" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <span class="font-headline font-bold text-sm text-[#FFFCF6] tracking-tight">(5.0)</span>
+                </div>
+                <p class="font-body text-sm sm:text-base text-[#FFFCF6] font-normal leading-relaxed italic mb-5">
+                  "10/10 service. Repaired two supermarket trolley dents on my rear quarter. No hassle of taking time off work to drop the car off. Will definitely use again."
+                </p>
+              </div>
+              <div class="pt-2">
+                <span class="bg-[#E6D9C5] text-[#302A24] px-3 py-1 font-ui font-bold text-xs uppercase tracking-wider inline-block rounded-[2px]">
+                  Emma Roberts
+                </span>
+                <p class="text-xs text-[#E6D9C5] font-ui mt-1">Edgbaston · Verified Review</p>
+              </div>
+            </div>
+
+            <div class="w-[84vw] sm:w-[360px] min-h-[250px] shrink-0 bg-[#201E1C] border border-[#594A3D] rounded-[8px] p-6 sm:p-7 flex flex-col justify-between shadow-subtle">
+              <div>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex items-center text-[#D52326] text-sm sm:text-base" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <span class="font-headline font-bold text-sm text-[#FFFCF6] tracking-tight">(5.0)</span>
+                </div>
+                <p class="font-body text-sm sm:text-base text-[#FFFCF6] font-normal leading-relaxed italic mb-5">
+                  "Honest and polite. Examined the damage, explained what was needed, quoted a fair price, and delivered a showroom finish on my driveway."
+                </p>
+              </div>
+              <div class="pt-2">
+                <span class="bg-[#E6D9C5] text-[#302A24] px-3 py-1 font-ui font-bold text-xs uppercase tracking-wider inline-block rounded-[2px]">
+                  James Bradley
+                </span>
+                <p class="text-xs text-[#E6D9C5] font-ui mt-1">Dorridge · Verified Review</p>
+              </div>
+            </div>
+
+            <div class="w-[84vw] sm:w-[360px] min-h-[250px] shrink-0 bg-[#201E1C] border border-[#594A3D] rounded-[8px] p-6 sm:p-7 flex flex-col justify-between shadow-subtle">
+              <div>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex items-center text-[#D52326] text-sm sm:text-base" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <span class="font-headline font-bold text-sm text-[#FFFCF6] tracking-tight">(5.0)</span>
+                </div>
+                <p class="font-body text-sm sm:text-base text-[#FFFCF6] font-normal leading-relaxed italic mb-5">
+                  "Was worried about lease return penalty charges. Smart Touch repaired the stone chips and scuffs prior to handover and passed inspection with flying colours."
+                </p>
+              </div>
+              <div class="pt-2">
+                <span class="bg-[#E6D9C5] text-[#302A24] px-3 py-1 font-ui font-bold text-xs uppercase tracking-wider inline-block rounded-[2px]">
+                  Chris Ward
+                </span>
+                <p class="text-xs text-[#E6D9C5] font-ui mt-1">Harborne, Birmingham · Verified Review</p>
+              </div>
+            </div>
+
+            <div class="w-[84vw] sm:w-[360px] min-h-[250px] shrink-0 bg-[#201E1C] border border-[#594A3D] rounded-[8px] p-6 sm:p-7 flex flex-col justify-between shadow-subtle">
+              <div>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex items-center text-[#D52326] text-sm sm:text-base" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <span class="font-headline font-bold text-sm text-[#FFFCF6] tracking-tight">(5.0)</span>
+                </div>
+                <p class="font-body text-sm sm:text-base text-[#FFFCF6] font-normal leading-relaxed italic mb-5">
+                  "Fast response, clear pricing from WhatsApp photos, and flawless scratch repair on my BMW door. Didn't lose my car for days at a bodyshop."
+                </p>
+              </div>
+              <div class="pt-2">
+                <span class="bg-[#E6D9C5] text-[#302A24] px-3 py-1 font-ui font-bold text-xs uppercase tracking-wider inline-block rounded-[2px]">
+                  Rebecca Hall
+                </span>
+                <p class="text-xs text-[#E6D9C5] font-ui mt-1">Kings Heath · Verified Review</p>
+              </div>
+            </div>
+
+            <div class="w-[84vw] sm:w-[360px] min-h-[250px] shrink-0 bg-[#201E1C] border border-[#594A3D] rounded-[8px] p-6 sm:p-7 flex flex-col justify-between shadow-subtle">
+              <div>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex items-center text-[#D52326] text-sm sm:text-base" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <span class="font-headline font-bold text-sm text-[#FFFCF6] tracking-tight">(5.0)</span>
+                </div>
+                <p class="font-body text-sm sm:text-base text-[#FFFCF6] font-normal leading-relaxed italic mb-5">
+                  "Deep bumper scrape completely gone. The metallic silver match is perfection in direct sunlight. Outstanding mobile repair work."
+                </p>
+              </div>
+              <div class="pt-2">
+                <span class="bg-[#E6D9C5] text-[#302A24] px-3 py-1 font-ui font-bold text-xs uppercase tracking-wider inline-block rounded-[2px]">
+                  Marcus Vance
+                </span>
+                <p class="text-xs text-[#E6D9C5] font-ui mt-1">Solihull · Verified Review</p>
+              </div>
+            </div>
+
+            <div class="w-[84vw] sm:w-[360px] min-h-[250px] shrink-0 bg-[#201E1C] border border-[#594A3D] rounded-[8px] p-6 sm:p-7 flex flex-col justify-between shadow-subtle">
+              <div>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex items-center text-[#D52326] text-sm sm:text-base" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <span class="font-headline font-bold text-sm text-[#FFFCF6] tracking-tight">(5.0)</span>
+                </div>
+                <p class="font-body text-sm sm:text-base text-[#FFFCF6] font-normal leading-relaxed italic mb-5">
+                  "Prompt, skilled, and courteous. Mobile bodywork at its finest. Saved my excess and preserved my no-claims bonus."
+                </p>
+              </div>
+              <div class="pt-2">
+                <span class="bg-[#E6D9C5] text-[#302A24] px-3 py-1 font-ui font-bold text-xs uppercase tracking-wider inline-block rounded-[2px]">
+                  Oliver Davies
+                </span>
+                <p class="text-xs text-[#E6D9C5] font-ui mt-1">Sutton Coldfield · Verified Review</p>
+              </div>
+            </div>
+
+            <!-- DUPLICATE SET 2 (Cards 13-18) -->
+            <div class="w-[84vw] sm:w-[360px] min-h-[250px] shrink-0 bg-[#201E1C] border border-[#594A3D] rounded-[8px] p-6 sm:p-7 flex flex-col justify-between shadow-subtle">
+              <div>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex items-center text-[#D52326] text-sm sm:text-base" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <span class="font-headline font-bold text-sm text-[#FFFCF6] tracking-tight">(5.0)</span>
+                </div>
+                <p class="font-body text-sm sm:text-base text-[#FFFCF6] font-normal leading-relaxed italic mb-5">
+                  "10/10 service. Repaired two supermarket trolley dents on my rear quarter. No hassle of taking time off work to drop the car off. Will definitely use again."
+                </p>
+              </div>
+              <div class="pt-2">
+                <span class="bg-[#E6D9C5] text-[#302A24] px-3 py-1 font-ui font-bold text-xs uppercase tracking-wider inline-block rounded-[2px]">
+                  Emma Roberts
+                </span>
+                <p class="text-xs text-[#E6D9C5] font-ui mt-1">Edgbaston · Verified Review</p>
+              </div>
+            </div>
+
+            <div class="w-[84vw] sm:w-[360px] min-h-[250px] shrink-0 bg-[#201E1C] border border-[#594A3D] rounded-[8px] p-6 sm:p-7 flex flex-col justify-between shadow-subtle">
+              <div>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex items-center text-[#D52326] text-sm sm:text-base" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <span class="font-headline font-bold text-sm text-[#FFFCF6] tracking-tight">(5.0)</span>
+                </div>
+                <p class="font-body text-sm sm:text-base text-[#FFFCF6] font-normal leading-relaxed italic mb-5">
+                  "Honest and polite. Examined the damage, explained what was needed, quoted a fair price, and delivered a showroom finish on my driveway."
+                </p>
+              </div>
+              <div class="pt-2">
+                <span class="bg-[#E6D9C5] text-[#302A24] px-3 py-1 font-ui font-bold text-xs uppercase tracking-wider inline-block rounded-[2px]">
+                  James Bradley
+                </span>
+                <p class="text-xs text-[#E6D9C5] font-ui mt-1">Dorridge · Verified Review</p>
+              </div>
+            </div>
+
+            <div class="w-[84vw] sm:w-[360px] min-h-[250px] shrink-0 bg-[#201E1C] border border-[#594A3D] rounded-[8px] p-6 sm:p-7 flex flex-col justify-between shadow-subtle">
+              <div>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex items-center text-[#D52326] text-sm sm:text-base" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <span class="font-headline font-bold text-sm text-[#FFFCF6] tracking-tight">(5.0)</span>
+                </div>
+                <p class="font-body text-sm sm:text-base text-[#FFFCF6] font-normal leading-relaxed italic mb-5">
+                  "Was worried about lease return penalty charges. Smart Touch repaired the stone chips and scuffs prior to handover and passed inspection with flying colours."
+                </p>
+              </div>
+              <div class="pt-2">
+                <span class="bg-[#E6D9C5] text-[#302A24] px-3 py-1 font-ui font-bold text-xs uppercase tracking-wider inline-block rounded-[2px]">
+                  Chris Ward
+                </span>
+                <p class="text-xs text-[#E6D9C5] font-ui mt-1">Harborne, Birmingham · Verified Review</p>
+              </div>
+            </div>
+
+            <div class="w-[84vw] sm:w-[360px] min-h-[250px] shrink-0 bg-[#201E1C] border border-[#594A3D] rounded-[8px] p-6 sm:p-7 flex flex-col justify-between shadow-subtle">
+              <div>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex items-center text-[#D52326] text-sm sm:text-base" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <span class="font-headline font-bold text-sm text-[#FFFCF6] tracking-tight">(5.0)</span>
+                </div>
+                <p class="font-body text-sm sm:text-base text-[#FFFCF6] font-normal leading-relaxed italic mb-5">
+                  "Fast response, clear pricing from WhatsApp photos, and flawless scratch repair on my BMW door. Didn't lose my car for days at a bodyshop."
+                </p>
+              </div>
+              <div class="pt-2">
+                <span class="bg-[#E6D9C5] text-[#302A24] px-3 py-1 font-ui font-bold text-xs uppercase tracking-wider inline-block rounded-[2px]">
+                  Rebecca Hall
+                </span>
+                <p class="text-xs text-[#E6D9C5] font-ui mt-1">Kings Heath · Verified Review</p>
+              </div>
+            </div>
+
+            <div class="w-[84vw] sm:w-[360px] min-h-[250px] shrink-0 bg-[#201E1C] border border-[#594A3D] rounded-[8px] p-6 sm:p-7 flex flex-col justify-between shadow-subtle">
+              <div>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex items-center text-[#D52326] text-sm sm:text-base" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <span class="font-headline font-bold text-sm text-[#FFFCF6] tracking-tight">(5.0)</span>
+                </div>
+                <p class="font-body text-sm sm:text-base text-[#FFFCF6] font-normal leading-relaxed italic mb-5">
+                  "Deep bumper scrape completely gone. The metallic silver match is perfection in direct sunlight. Outstanding mobile repair work."
+                </p>
+              </div>
+              <div class="pt-2">
+                <span class="bg-[#E6D9C5] text-[#302A24] px-3 py-1 font-ui font-bold text-xs uppercase tracking-wider inline-block rounded-[2px]">
+                  Marcus Vance
+                </span>
+                <p class="text-xs text-[#E6D9C5] font-ui mt-1">Solihull · Verified Review</p>
+              </div>
+            </div>
+
+            <div class="w-[84vw] sm:w-[360px] min-h-[250px] shrink-0 bg-[#201E1C] border border-[#594A3D] rounded-[8px] p-6 sm:p-7 flex flex-col justify-between shadow-subtle">
+              <div>
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="flex items-center text-[#D52326] text-sm sm:text-base" aria-label="5 out of 5 stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <span class="font-headline font-bold text-sm text-[#FFFCF6] tracking-tight">(5.0)</span>
+                </div>
+                <p class="font-body text-sm sm:text-base text-[#FFFCF6] font-normal leading-relaxed italic mb-5">
+                  "Prompt, skilled, and courteous. Mobile bodywork at its finest. Saved my excess and preserved my no-claims bonus."
+                </p>
+              </div>
+              <div class="pt-2">
+                <span class="bg-[#E6D9C5] text-[#302A24] px-3 py-1 font-ui font-bold text-xs uppercase tracking-wider inline-block rounded-[2px]">
+                  Oliver Davies
+                </span>
+                <p class="text-xs text-[#E6D9C5] font-ui mt-1">Sutton Coldfield · Verified Review</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Verified Facebook Link Action -->
+      <div class="text-center mt-10">
+        <a 
+          href="https://www.facebook.com/profile.php?id=61572227550301" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="inline-flex items-center gap-2 bg-[#302C29] border border-[#594A3D] hover:border-[#D52326] text-[#FFFCF6] px-6 py-3 rounded-[4px] font-ui font-bold text-xs uppercase tracking-wider transition shadow-subtle"
+        >
+          <span>View All Facebook Reviews</span>
+          <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+    </section>
+
+    <!-- =========================================================
+         SECTION 8: DIRECT 1-COLUMN FAQ
+    ========================================================== -->
+    <section id="faq" class="relative w-full py-16 sm:py-24 bg-[#201E1C] overflow-hidden">
+      
+      <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center mb-12 sm:mb-16">
+          <h2 class="font-headline font-bold text-3xl sm:text-4xl md:text-5xl text-[#FFFCF6] tracking-tight uppercase leading-tight">
+            FREQUENTLY ASKED <span class="text-[#D52326]">QUESTIONS</span>
+          </h2>
+          <p class="font-body text-[#E6D9C5] text-base sm:text-lg mt-4 max-w-2xl mx-auto leading-relaxed">
+            Direct answers regarding our mobile car body repairs, colour matching, appointment scheduling, and service areas.
+          </p>
+        </div>
+
+        <!-- Single-Column Direct Q&A -->
+        <div class="space-y-5 sm:space-y-6">
+          
+          <div class="bg-[#181614] border border-[#594A3D] rounded-[8px] p-6 sm:p-8 transition-all shadow-subtle">
+            <h3 class="font-headline font-bold text-xl sm:text-2xl text-[#FFFCF6] leading-snug">
+              Do you come to my home or workplace?
+            </h3>
+            <p class="font-body text-base sm:text-lg text-[#E6D9C5] leading-relaxed mt-4 pt-4 border-t border-[#594A3D]">
+              Yes. Smart Touch operates a fully self-contained mobile repair van that brings all necessary paint mixing tools, spray equipment, and power supplies directly to your driveway or workplace parking space.
+            </p>
+          </div>
+
+          <div class="bg-[#181614] border border-[#594A3D] rounded-[8px] p-6 sm:p-8 transition-all shadow-subtle">
+            <h3 class="font-headline font-bold text-xl sm:text-2xl text-[#FFFCF6] leading-snug">
+              Which areas do you cover?
+            </h3>
+            <p class="font-body text-base sm:text-lg text-[#E6D9C5] leading-relaxed mt-4 pt-4 border-t border-[#594A3D]">
+              We cover Birmingham, Solihull, Sutton Coldfield, Shirley, Dorridge, and surrounding West Midlands areas. Simply enter your postcode in the quote form above to verify service at your exact location.
+            </p>
+          </div>
+
+          <div class="bg-[#181614] border border-[#594A3D] rounded-[8px] p-6 sm:p-8 transition-all shadow-subtle">
+            <h3 class="font-headline font-bold text-xl sm:text-2xl text-[#FFFCF6] leading-snug">
+              What photos should I send for an accurate quote?
+            </h3>
+            <p class="font-body text-base sm:text-lg text-[#E6D9C5] leading-relaxed mt-4 pt-4 border-t border-[#594A3D]">
+              For the most accurate assessment, take two clear photos in natural daylight: one wide shot showing the entire vehicle panel from 2–3 metres back, and one closer shot showing the depth of the scratch, scuff, or dent.
+            </p>
+          </div>
+
+          <div class="bg-[#181614] border border-[#594A3D] rounded-[8px] p-6 sm:p-8 transition-all shadow-subtle">
+            <h3 class="font-headline font-bold text-xl sm:text-2xl text-[#FFFCF6] leading-snug">
+              Can you match my car's exact paint colour?
+            </h3>
+            <p class="font-body text-base sm:text-lg text-[#E6D9C5] leading-relaxed mt-4 pt-4 border-t border-[#594A3D]">
+              Yes. We use a specialist digital spectrum colour-reading device on site to analyse your vehicle's factory paint and formulation, ensuring an accurate and seamless blend with surrounding original bodywork.
+            </p>
+          </div>
+
+          <div class="bg-[#181614] border border-[#594A3D] rounded-[8px] p-6 sm:p-8 transition-all shadow-subtle">
+            <h3 class="font-headline font-bold text-xl sm:text-2xl text-[#FFFCF6] leading-snug">
+              How will you contact me after I request a quote?
+            </h3>
+            <p class="font-body text-base sm:text-lg text-[#E6D9C5] leading-relaxed mt-4 pt-4 border-t border-[#594A3D]">
+              Once you submit your damage details and photos, our technician reviews the damage and contacts you via your preferred method (phone call or text message) with quote details and available appointment slots.
+            </p>
+          </div>
+
+          <div class="bg-[#181614] border border-[#594A3D] rounded-[8px] p-6 sm:p-8 transition-all shadow-subtle">
+            <h3 class="font-headline font-bold text-xl sm:text-2xl text-[#FFFCF6] leading-snug">
+              Does requesting a quote commit me to a booking?
+            </h3>
+            <p class="font-body text-base sm:text-lg text-[#E6D9C5] leading-relaxed mt-4 pt-4 border-t border-[#594A3D]">
+              No. Requesting a quote is completely free of charge and obligation. You decide whether to proceed only after you receive our assessment and price.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Quick Direct Help Banner -->
+        <div class="mt-10 sm:mt-12 bg-[#181614] border border-[#594A3D] rounded-[8px] p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-subtle">
+          <div>
+            <h3 class="font-headline font-bold text-lg sm:text-xl text-[#FFFCF6]">
+              Have a specific repair question not covered here?
+            </h3>
+            <p class="font-body text-sm text-[#E6D9C5] mt-1">
+              Speak directly with our mobile technician · Mon–Sat 8:00 AM – 6:00 PM
+            </p>
+          </div>
+          <div class="flex items-center gap-3 shrink-0 w-full sm:w-auto">
+            <a href="tel:+447496005074" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#D52326] hover:bg-[#B51D26] text-white font-ui font-bold text-sm uppercase tracking-wider px-6 py-3.5 rounded-[4px] transition shadow-subtle">
+              <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1c-9.39 0-17-7.61-17-17a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.21 2.2z"/></svg>
+              <span>Call 07496 005074</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- =========================================================
+       SECTION 9: OFFICIAL FOOTER
+  ========================================================== -->
+  <footer class="relative w-full bg-[#181614] text-[#FFFCF6] py-10 sm:py-14">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 pb-10 sm:pb-12 border-b border-[#594A3D]">
+        
+        <!-- Col 1: Brand -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="flex items-center gap-3.5">
+            <img 
+              src="assets/design/smart-touch-logo-cropped.webp" 
+              alt="Smart Touch Logo" 
+              width="120"
+              height="62"
+              class="h-14 w-auto object-contain"
+            />
+            <div>
+              <span class="block font-headline font-bold text-lg tracking-tight uppercase text-[#FFFCF6] leading-none">
+                SMART TOUCH
+              </span>
+              <span class="block text-[11px] font-ui font-semibold tracking-widest text-[#D52326] uppercase mt-1">
+                SMART REPAIRS
+              </span>
+            </div>
+          </div>
+          <p class="text-xs sm:text-sm text-[#E6D9C5] font-body leading-relaxed max-w-sm">
+            Specialist mobile car body, scratch, dent, scuff, and paint repairs across Birmingham, Solihull, and surrounding areas. Bodyshop finish at your convenience.
+          </p>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="lg:col-span-2 space-y-3 font-ui">
+          <h4 class="font-headline font-bold text-xs sm:text-sm uppercase tracking-wider text-[#FFFCF6]">
+            QUICK LINKS
+          </h4>
+          <ul class="space-y-2 text-xs sm:text-sm text-[#E6D9C5]">
+            <li><a href="#repairs" class="hover:text-[#D52326] transition">Repairs</a></li>
+            <li><a href="#why-choose" class="hover:text-[#D52326] transition">Why Us</a></li>
+            <li><a href="#gallery" class="hover:text-[#D52326] transition">Our Work</a></li>
+            <li><a href="#quote" class="hover:text-[#D52326] transition">Get Your Quote</a></li>
+            <li><a href="#reviews" class="hover:text-[#D52326] transition">Customer Reviews</a></li>
+            <li><a href="#faq" class="hover:text-[#D52326] transition">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Service Area & Hours -->
+        <div class="lg:col-span-2 space-y-3 font-ui">
+          <h4 class="font-headline font-bold text-xs sm:text-sm uppercase tracking-wider text-[#FFFCF6]">
+            SERVICE AREA
+          </h4>
+          <div class="space-y-2 text-xs sm:text-sm text-[#E6D9C5] font-body leading-relaxed">
+            <p>
+              <strong class="text-[#FFFCF6] block font-semibold font-ui">Coverage:</strong>
+              Birmingham, Solihull &amp; surrounding West Midlands.
+            </p>
+            <p>
+              <strong class="text-[#FFFCF6] block font-semibold font-ui">Operating Hours:</strong>
+              Mon – Sat: 8:00 AM – 6:00 PM<br />
+              <span class="text-[#D52326] font-medium font-ui">Mobile By Appointment</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Col 4: Direct Contact & Social -->
+        <div class="lg:col-span-3 space-y-3 font-ui">
+          <h4 class="font-headline font-bold text-xs sm:text-sm uppercase tracking-wider text-[#FFFCF6]">
+            DIRECT CONTACT
+          </h4>
+          <p class="text-xs text-[#E6D9C5] font-body">
+            Speak directly with technician:
+          </p>
+          
+          <div class="space-y-2 pt-1">
+            <a 
+              href="tel:+447496005074" 
+              class="flex items-center justify-center gap-2 bg-[#D52326] hover:bg-[#B51D26] text-white px-4 py-2.5 rounded-[4px] font-ui font-bold text-xs uppercase tracking-wider transition shadow-subtle"
+            >
+              <svg class="w-4 h-4 shrink-0 fill-current" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1c-9.39 0-17-7.61-17-17a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.21 2.2z"/></svg>
+              <span>CALL 07496 005074</span>
+            </a>
+
+            <a 
+              href="https://www.facebook.com/profile.php?id=61572227550301" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="w-full flex items-center justify-center gap-2 bg-[#302C29] border border-[#594A3D] hover:border-[#D52326] text-[#FFFCF6] px-4 py-2.5 rounded-[4px] font-ui font-bold text-xs uppercase tracking-wider transition text-center"
+            >
+              <span>Visit Official Facebook</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar: Legal & Privacy -->
+      <div class="pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#E6D9C5] font-body text-center sm:text-left">
+        <p>
+          &copy; <span id="year">2026</span> Smart Touch. All rights reserved. Mobile Car Body Repairs across Birmingham &amp; Solihull.
+        </p>
+        <div class="flex items-center gap-4 text-xs font-ui">
+          <button type="button" onclick="openPrivacyModal()" class="hover:text-[#D52326] transition underline">
+            Privacy Policy
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       PRIVACY POLICY DIALOG MODAL
+  ========================================================== -->
+  <dialog id="privacyDialog" class="bg-[#302C29] border border-[#594A3D] text-[#FFFCF6] rounded-[8px] p-6 sm:p-8 max-w-lg w-full shadow-2xl backdrop:bg-[#181614] m-auto">
+    <div class="flex items-center justify-between mb-4 pb-3 border-b border-[#594A3D]">
+      <h3 class="font-headline font-bold text-xl uppercase tracking-tight text-[#FFFCF6]">
+        Privacy Information
+      </h3>
+      <button type="button" onclick="closePrivacyModal()" class="text-[#E6D9C5] hover:text-[#D52326] text-2xl font-bold leading-none p-1" aria-label="Close dialog">&times;</button>
+    </div>
+    <div class="space-y-3 text-xs sm:text-sm text-[#E6D9C5] font-body leading-relaxed max-h-[60vh] overflow-y-auto pr-1">
+      <p>
+        Smart Touch respects your privacy and is committed to protecting your personal data in accordance with UK data protection laws.
+      </p>
+      <p>
+        <strong>Information Collected:</strong> When you submit a quote request, we collect your name, phone number, postcode, vehicle make and model, and any damage photographs you provide.
+      </p>
+      <p>
+        <strong>Purpose:</strong> Your details are solely used to assess vehicle repair requirements, verify service coverage in Birmingham and Solihull, and provide you with an accurate quote.
+      </p>
+      <p>
+        <strong>Third Parties:</strong> We never sell, rent, or share your contact details with third-party advertisers or external marketing companies.
+      </p>
+      <p>
+        <strong>Data Retention:</strong> Enquiry information is retained only as long as necessary to fulfill your quote request or agreed repair service.
+      </p>
+    </div>
+    <div class="mt-6 pt-4 border-t border-[#594A3D] flex justify-end">
+      <button type="button" onclick="closePrivacyModal()" class="bg-[#D52326] hover:bg-[#B51D26] text-white px-5 py-2.5 rounded-[4px] font-ui font-bold text-xs uppercase tracking-wider transition">
+        Close
+      </button>
+    </div>
+  </dialog>
+
+  <!-- =========================================================
+       JAVASCRIPT ARCHITECTURE
+  ========================================================== -->
+  <script>
+    // 1. Mobile Menu Drawer Toggle
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const toggle = document.getElementById('menuToggle');
+      const isHidden = menu.classList.contains('hidden');
+      if (isHidden) {
+        menu.classList.remove('hidden');
+        toggle.setAttribute('aria-expanded', 'true');
+      } else {
+        menu.classList.add('hidden');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    // Close mobile menu on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        const menu = document.getElementById('mobileMenu');
+        if (menu && !menu.classList.contains('hidden')) {
+          toggleMobileMenu();
+        }
+        closePrivacyModal();
+      }
+    });
+
+    // 2. Mobile Repairs 1-Card Snapping Carousel
+    let courseCurrentIndex = 0;
+    const courseTotalSlides = 5;
+    let courseAutoSlideTimer = null;
+
+    function updateCourseDots(idx) {
+      const dotsContainer = document.getElementById('courseSliderDots');
+      if (!dotsContainer) return;
+      const dots = dotsContainer.querySelectorAll('button');
+      dots.forEach((dot, i) => {
+        if (i === idx) {
+          dot.className = 'w-7 h-2 rounded-[2px] bg-[#D52326] transition-all duration-300';
+        } else {
+          dot.className = 'w-2 h-2 rounded-[2px] bg-[#594A3D] transition-all duration-300';
+        }
+      });
+    }
+
+    function goToCourseSlide(idx) {
+      const slider = document.getElementById('courseMobileSlider');
+      if (!slider) return;
+      courseCurrentIndex = (idx + courseTotalSlides) % courseTotalSlides;
+      const slideWidth = slider.clientWidth;
+      slider.scrollTo({
+        left: courseCurrentIndex * slideWidth,
+        behavior: 'smooth'
+      });
+      updateCourseDots(courseCurrentIndex);
+    }
+
+    function slideCoursePrev() {
+      goToCourseSlide(courseCurrentIndex - 1);
+      resetCourseAutoSlide();
+    }
+
+    function slideCourseNext() {
+      goToCourseSlide(courseCurrentIndex + 1);
+      resetCourseAutoSlide();
+    }
+
+    function startCourseAutoSlide() {
+      if (courseAutoSlideTimer) clearInterval(courseAutoSlideTimer);
+      courseAutoSlideTimer = setInterval(() => {
+        if (window.innerWidth < 768) {
+          goToCourseSlide(courseCurrentIndex + 1);
+        }
+      }, 4500);
+    }
+
+    function resetCourseAutoSlide() {
+      clearInterval(courseAutoSlideTimer);
+      startCourseAutoSlide();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const yearEl = document.getElementById('year');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+      const slider = document.getElementById('courseMobileSlider');
+      if (slider) {
+        let isScrolling;
+        slider.addEventListener('scroll', () => {
+          window.clearTimeout(isScrolling);
+          isScrolling = setTimeout(() => {
+            const slideWidth = slider.clientWidth;
+            if (slideWidth > 0) {
+              const newIdx = Math.round(slider.scrollLeft / slideWidth);
+              if (newIdx !== courseCurrentIndex && newIdx >= 0 && newIdx < courseTotalSlides) {
+                courseCurrentIndex = newIdx;
+                updateCourseDots(courseCurrentIndex);
+              }
+            }
+          }, 60);
+        }, { passive: true });
+
+        slider.addEventListener('touchstart', () => clearInterval(courseAutoSlideTimer), { passive: true });
+        slider.addEventListener('touchend', () => resetCourseAutoSlide(), { passive: true });
+        startCourseAutoSlide();
+      }
+
+      const dropZone = document.getElementById('dropZone');
+      if (dropZone) {
+        ['dragenter', 'dragover'].forEach(eventName => {
+          dropZone.addEventListener(eventName, (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            dropZone.classList.add('border-[#D52326]', 'bg-[#201E1C]');
+          }, false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+          dropZone.addEventListener(eventName, (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            dropZone.classList.remove('border-[#D52326]', 'bg-[#201E1C]');
+          }, false);
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+          const dt = e.dataTransfer;
+          if (dt && dt.files) {
+            handleFilesSelected(dt.files);
+          }
+        }, false);
+      }
+
+      initComparisonSliders();
+    });
+
+    // Before & After Interactive Comparison Sliders
+    function initComparisonSliders() {
+      document.querySelectorAll('.comparison-slider-container').forEach(container => {
+        const range = container.querySelector('input[type="range"]');
+        if (!range) return;
+        const update = () => {
+          container.style.setProperty('--pos', range.value + '%');
+        };
+        range.addEventListener('input', update);
+        range.addEventListener('change', update);
+        update();
+      });
+    }
+
+    function setComparisonView(caseNum, mode) {
+      const container = document.getElementById('comparisonCase' + caseNum);
+      if (!container) return;
+      const range = container.querySelector('input[type="range"]');
+      const val = (mode === 'before') ? 100 : (mode === 'after') ? 0 : 50;
+      if (range) {
+        range.value = val;
+      }
+      container.style.setProperty('--pos', val + '%');
+
+      const btnBefore = container.querySelector('.btn-view-before');
+      const btnAfter = container.querySelector('.btn-view-after');
+      const btnSplit = container.querySelector('.btn-view-split');
+      [btnBefore, btnAfter, btnSplit].forEach(b => {
+        if (b) {
+          b.classList.remove('bg-[#D52326]', 'text-white');
+          b.classList.add('text-[#E6D9C5]');
+        }
+      });
+      if (mode === 'before' && btnBefore) {
+        btnBefore.classList.add('bg-[#D52326]', 'text-white');
+        btnBefore.classList.remove('text-[#E6D9C5]');
+      } else if (mode === 'after' && btnAfter) {
+        btnAfter.classList.add('bg-[#D52326]', 'text-white');
+        btnAfter.classList.remove('text-[#E6D9C5]');
+      } else if (mode === 'split' && btnSplit) {
+        btnSplit.classList.add('bg-[#D52326]', 'text-white');
+        btnSplit.classList.remove('text-[#E6D9C5]');
+      }
+    }
+
+    // 3. Fast-Track Multi-Step Form Navigation & Damage Pre-Selection
+    let currentStep = 1;
+    let selectedDamage = 'Scratch & scuff';
+    const uploadedFiles = [];
+
+    function selectDamageType(damageType) {
+      selectedDamage = damageType;
+      const radios = document.querySelectorAll('input[name="damageChoice"]');
+      radios.forEach(r => {
+        if (r.value === damageType || (damageType === "Multiple / other" && r.value === "Bumper & plastic trim")) {
+          r.checked = true;
+          handleDamageChange(r);
+        }
+      });
+      goToStep(1);
+    }
+
+    let selectedTiming = "This week";
+
+    function handleDamageChange(input) {
+      selectedDamage = input.value;
+      document.querySelectorAll(".damage-card").forEach(el => {
+        el.classList.remove("border-[#D52326]");
+        el.classList.add("border-[#594A3D]");
+        const dot = el.querySelector(".radio-dot");
+        if (dot) {
+          dot.className = "radio-dot w-5 h-5 border border-[#594A3D] bg-transparent flex items-center justify-center shrink-0 mt-0.5 rounded-full";
+          const inner = dot.querySelector("div");
+          if (inner) inner.className = "w-2 h-2 bg-transparent rounded-full";
+        }
+      });
+
+      const activeCard = input.closest(".damage-card");
+      if (activeCard) {
+        activeCard.classList.remove("border-[#594A3D]");
+        activeCard.classList.add("border-[#D52326]");
+        const dot = activeCard.querySelector(".radio-dot");
+        if (dot) {
+          dot.className = "radio-dot w-5 h-5 bg-[#D52326] flex items-center justify-center shrink-0 mt-0.5 rounded-full";
+          const inner = dot.querySelector("div");
+          if (inner) inner.className = "w-2 h-2 bg-white rounded-full";
+        }
+      }
+    }
+
+    function handleTimingChange(input) {
+      selectedTiming = input.value;
+      document.querySelectorAll(".timing-card").forEach(el => {
+        el.classList.remove("border-[#D52326]");
+        el.classList.add("border-[#594A3D]");
+        const dot = el.querySelector(".timing-dot");
+        if (dot) {
+          dot.className = "timing-dot w-4 h-4 border border-[#594A3D] bg-transparent flex items-center justify-center shrink-0 rounded-full";
+          const inner = dot.querySelector("div");
+          if (inner) inner.className = "w-1.5 h-1.5 bg-transparent rounded-full";
+        }
+      });
+
+      const activeCard = input.closest(".timing-card");
+      if (activeCard) {
+        activeCard.classList.remove("border-[#594A3D]");
+        activeCard.classList.add("border-[#D52326]");
+        const dot = activeCard.querySelector(".timing-dot");
+        if (dot) {
+          dot.className = "timing-dot w-4 h-4 bg-[#D52326] flex items-center justify-center shrink-0 rounded-full";
+          const inner = dot.querySelector("div");
+          if (inner) inner.className = "w-1.5 h-1.5 bg-white rounded-full";
+        }
+      }
+    }
+
+    function clickTab(step) {
+      if (step === 1) {
+        goToStep(1);
+      } else if (step === 2) {
+        goToStep(2);
+      } else if (step === 3) {
+        const nameVal = document.getElementById("fbName").value.trim();
+        const phoneVal = document.getElementById("fbPhone").value.trim();
+        if (!nameVal || !phoneVal) {
+          goToStep(2);
+          validateStep2AndProceed();
+        } else {
+          goToStep(3);
+        }
+      }
+    }
+
+    function goToStep(step) {
+      currentStep = step;
+      document.getElementById("formStep1").classList.add("hidden");
+      document.getElementById("formStep2").classList.add("hidden");
+      document.getElementById("formStep3").classList.add("hidden");
+      document.getElementById("formStep" + step).classList.remove("hidden");
+
+      const t1 = document.getElementById("tabStep1");
+      const t2 = document.getElementById("tabStep2");
+      const t3 = document.getElementById("tabStep3");
+      const b1 = document.getElementById("tabBadge1");
+      const b2 = document.getElementById("tabBadge2");
+      const b3 = document.getElementById("tabBadge3");
+
+      const tabs = [t1, t2, t3];
+      const badges = [b1, b2, b3];
+
+      tabs.forEach((t, i) => {
+        if (!t) return;
+        if (i + 1 === step) {
+          t.className = "pb-3 sm:pb-4 border-b-2 border-[#D52326] text-[#D52326] flex items-center gap-1.5 sm:gap-2 transition cursor-pointer font-ui text-[11px] sm:text-xs md:text-sm font-bold uppercase tracking-wider shrink-0";
+        } else {
+          t.className = "pb-3 sm:pb-4 border-b-2 border-transparent text-[#E6D9C5] hover:text-[#FFFCF6] flex items-center gap-1.5 sm:gap-2 transition cursor-pointer font-ui text-[11px] sm:text-xs md:text-sm font-bold uppercase tracking-wider shrink-0";
+        }
+      });
+
+      badges.forEach((b, i) => {
+        if (!b) return;
+        if (i + 1 === step) {
+          b.className = "w-5 h-5 rounded-full bg-[#D52326] text-white text-[10px] font-black flex items-center justify-center";
+        } else {
+          b.className = "w-5 h-5 rounded-full bg-[#302C29] border border-[#594A3D] text-[#E6D9C5] text-[10px] font-black flex items-center justify-center";
+        }
+      });
+
+      const errorBox = document.getElementById("formError");
+      if (errorBox) errorBox.classList.add("hidden");
+    }
+
+    function validateStep2AndProceed() {
+      const nameVal = document.getElementById("fbName").value.trim();
+      const phoneVal = document.getElementById("fbPhone").value.trim();
+      const postcodeVal = document.getElementById("fbPostcode").value.trim().toUpperCase();
+      let valid = true;
+
+      if (!nameVal) {
+        document.getElementById("nameError").classList.remove("hidden");
+        valid = false;
+      } else {
+        document.getElementById("nameError").classList.add("hidden");
+      }
+
+      if (!phoneVal || phoneVal.length < 8) {
+        document.getElementById("phoneError").classList.remove("hidden");
+        valid = false;
+      } else {
+        document.getElementById("phoneError").classList.add("hidden");
+      }
+
+      const ukPostcodeRegex = /^(GIR ?0AA|[A-Z]{1,2}[0-9][0-9A-Z]? ?[0-9][A-Z]{2})$/i;
+      if (!postcodeVal || !ukPostcodeRegex.test(postcodeVal)) {
+        document.getElementById("postcodeError").classList.remove("hidden");
+        valid = false;
+      } else {
+        document.getElementById("postcodeError").classList.add("hidden");
+        document.getElementById("fbPostcode").value = postcodeVal;
+      }
+
+      if (valid) {
+        goToStep(3);
+      }
+    }
+
+        // 4. Photograph Upload Management
+    function handleFilesSelected(files) {
+      const errorEl = document.getElementById('uploadError');
+      errorEl.classList.add('hidden');
+      errorEl.textContent = '';
+      const allowedExts = /\.(jpe?g|png|webp|heic|heif)$/i;
+
+      for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+
+        if (uploadedFiles.length >= 6) {
+          errorEl.textContent = 'Maximum 6 photographs allowed. Remove an image to add another.';
+          errorEl.classList.remove('hidden');
+          break;
+        }
+
+        if (!allowedExts.test(file.name)) {
+          errorEl.textContent = `${file.name}: Please upload JPG, PNG, WebP or HEIC images only.`;
+          errorEl.classList.remove('hidden');
+          continue;
+        }
+
+        if (file.size > 10 * 1024 * 1024) {
+          errorEl.textContent = `${file.name}: Image exceeds 10 MB limit.`;
+          errorEl.classList.remove('hidden');
+          continue;
+        }
+
+        if (uploadedFiles.some(item => item.file.name === file.name && item.file.size === file.size)) {
+          continue;
+        }
+
+        const objectUrl = URL.createObjectURL(file);
+        uploadedFiles.push({ file, url: objectUrl });
+      }
+
+      renderFilePreviews();
+    }
+
+    function removeUploadedFile(index) {
+      if (uploadedFiles[index]) {
+        URL.revokeObjectURL(uploadedFiles[index].url);
+        uploadedFiles.splice(index, 1);
+        renderFilePreviews();
+      }
+    }
+
+    function renderFilePreviews() {
+      const list = document.getElementById('filePreviewList');
+      const status = document.getElementById('fileStatus');
+      list.innerHTML = '';
+
+      uploadedFiles.forEach((item, index) => {
+        const li = document.createElement('li');
+        li.className = 'relative bg-[#302C29] border border-[#594A3D] rounded-[4px] p-2 flex flex-col items-center justify-between shadow-subtle';
+
+        const img = document.createElement('img');
+        img.src = item.url;
+        img.alt = `Damage photo ${index + 1}`;
+        img.className = 'w-full h-24 object-cover rounded-[2px] mb-2';
+
+        const info = document.createElement('div');
+        info.className = 'w-full flex items-center justify-between text-[10px] text-[#E6D9C5] font-ui';
+        const nameSpan = document.createElement('span');
+        nameSpan.className = 'truncate max-w-[100px]';
+        nameSpan.textContent = item.file.name;
+        const sizeSpan = document.createElement('span');
+        sizeSpan.textContent = (item.file.size / (1024 * 1024)).toFixed(1) + 'MB';
+        info.appendChild(nameSpan);
+        info.appendChild(sizeSpan);
+
+        const removeBtn = document.createElement('button');
+        removeBtn.type = 'button';
+        removeBtn.className = 'mt-2 w-full bg-[#181614] hover:bg-[#D52326] text-white py-1 rounded-[2px] text-[10px] font-ui uppercase font-semibold transition';
+        removeBtn.textContent = 'Remove';
+        removeBtn.setAttribute('aria-label', `Remove photo ${item.file.name}`);
+        removeBtn.onclick = () => removeUploadedFile(index);
+
+        li.appendChild(img);
+        li.appendChild(info);
+        li.appendChild(removeBtn);
+        list.appendChild(li);
+      });
+
+      if (uploadedFiles.length > 0) {
+        status.textContent = `${uploadedFiles.length} of 6 photographs attached.`;
+      } else {
+        status.textContent = '';
+      }
+    }
+
+    window.addEventListener('pagehide', () => {
+      uploadedFiles.forEach(item => URL.revokeObjectURL(item.url));
+    });
+
+    // 5. Final Step Submission: Direct Email Delivery to abckaium1@gmail.com & Messenger Fallback
+    async function submitQuoteRequest() {
+      const vehicleVal = document.getElementById("fbVehicle").value.trim();
+      const descVal = document.getElementById("fbDescription").value.trim();
+      const consentVal = document.getElementById("fbConsent").checked;
+      let valid = true;
+
+      if (!vehicleVal) {
+        document.getElementById("vehicleError").classList.remove("hidden");
+        valid = false;
+      } else {
+        document.getElementById("vehicleError").classList.add("hidden");
+      }
+
+      if (!descVal) {
+        document.getElementById("descError").classList.remove("hidden");
+        valid = false;
+      } else {
+        document.getElementById("descError").classList.add("hidden");
+      }
+
+      if (!consentVal) {
+        document.getElementById("consentError").classList.remove("hidden");
+        valid = false;
+      } else {
+        document.getElementById("consentError").classList.add("hidden");
+      }
+
+      if (!valid) return;
+
+      const submitBtn = document.getElementById("submitQuoteBtn");
+      const submitText = document.getElementById("submitBtnText");
+      if (submitBtn) submitBtn.disabled = true;
+      if (submitText) submitText.textContent = "SENDING TO EMAIL...";
+
+      const nameVal = document.getElementById("fbName").value.trim();
+      const phoneVal = document.getElementById("fbPhone").value.trim();
+      const postcodeVal = document.getElementById("fbPostcode").value.trim();
+      const contactVal = document.querySelector('input[name="contactMethod"]:checked')?.value || "Phone call";
+      const timingVal = document.querySelector('input[name="timingChoice"]:checked')?.value || selectedTiming || "This week";
+
+      document.getElementById("confirmedPhone").textContent = phoneVal || "your phone number";
+
+      // 1. Populate and submit the FormSubmit bridge directly to abckaium1@gmail.com
+      const fsSubject = document.getElementById("fs_subject");
+      const fsName = document.getElementById("fs_name");
+      const fsPhone = document.getElementById("fs_phone");
+      const fsPostcode = document.getElementById("fs_postcode");
+      const fsContact = document.getElementById("fs_contact");
+      const fsDamage = document.getElementById("fs_damage");
+      const fsTiming = document.getElementById("fs_timing");
+      const fsVehicle = document.getElementById("fs_vehicle");
+      const fsDesc = document.getElementById("fs_description");
+      const dispatchForm = document.getElementById("emailDispatchForm");
+
+      if (fsSubject) fsSubject.value = `New Smart Touch Quote - ${postcodeVal || 'Driveway Repair'}`;
+      if (fsName) fsName.value = nameVal;
+      if (fsPhone) fsPhone.value = phoneVal;
+      if (fsPostcode) fsPostcode.value = postcodeVal;
+      if (fsContact) fsContact.value = contactVal;
+      if (fsDamage) fsDamage.value = selectedDamage || "General Repair";
+      if (fsTiming) fsTiming.value = timingVal;
+      if (fsVehicle) fsVehicle.value = vehicleVal;
+      if (fsDesc) fsDesc.value = descVal;
+
+      if (dispatchForm) {
+        try {
+          dispatchForm.submit();
+        } catch (err) {
+          console.warn("Email bridge dispatch note:", err);
+        }
+      }
+
+      // 2. Prepare Facebook Messenger handover fallback
+      const msgLines = [
+        "Hello Smart Touch, I would like to enquire about a mobile vehicle body repair.",
+        "",
+        "Service: " + (selectedDamage || "General Repair"),
+        "Preferred Timing: " + timingVal,
+        "Name: " + nameVal,
+        "Phone: " + phoneVal,
+        "Postcode: " + postcodeVal,
+        "Preferred Contact: " + contactVal,
+        "Vehicle: " + vehicleVal,
+        "Description: " + descVal,
+        "",
+        "Photographs: " + (uploadedFiles.length ? `${uploadedFiles.length} photo(s) selected to attach.` : "Available on request.")
+      ];
+
+      const handoverText = encodeURIComponent(msgLines.join("\n"));
+      const messengerBtn = document.getElementById("messengerHandoverBtn");
+      if (messengerBtn) {
+        messengerBtn.href = `https://m.me/61572227550301?text=${handoverText}`;
+      }
+
+      // 3. Transition UI to Success Confirmation
+      setTimeout(() => {
+        document.getElementById("formStep3").classList.add("hidden");
+        document.getElementById("stepProgressContainer").classList.add("hidden");
+        const successEl = document.getElementById("fastBookSuccess");
+        if (successEl) {
+          successEl.classList.remove("hidden");
+          successEl.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+        if (submitBtn) submitBtn.disabled = false;
+        if (submitText) submitText.textContent = "CONFIRM PRIORITY BOOKING";
+      }, 500);
+    }
+
+        // 6. Privacy Modal Dialog
+    function openPrivacyModal() {
+      const dialog = document.getElementById('privacyDialog');
+      if (dialog && typeof dialog.showModal === 'function') {
+        dialog.showModal();
+      } else if (dialog) {
+        dialog.setAttribute('open', '');
+      }
+    }
+
+    function closePrivacyModal() {
+      const dialog = document.getElementById('privacyDialog');
+      if (dialog && typeof dialog.close === 'function') {
+        dialog.close();
+      } else if (dialog) {
+        dialog.removeAttribute('open');
+      }
+    }
+  </script>
+
+</body>
+</html>
