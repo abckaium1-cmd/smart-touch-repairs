@@ -31,6 +31,171 @@
     @font-face { font-family: 'Tanker'; src: url('tanker-400.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
     @font-face { font-family: 'Archivo'; src: url('archivo-500.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
     @font-face { font-family: 'Archivo'; src: url('archivo-600.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+
+  /* =========================================================
+     LAPTOP & MACBOOK OPTIMIZATION (1024px - 1439px)
+     Ensures compact, balanced, non-bloated proportions
+     Leaves Mobile (< 1024px) and Desktop (1440px+) 100% untouched
+  ========================================================== */
+  @media (min-width: 1024px) and (max-width: 1439px) {
+    /* 1. Global Section Spacing */
+    section {
+      padding-top: 2.75rem !important;
+      padding-bottom: 2.75rem !important;
+    }
+    footer {
+      padding-top: 2.5rem !important;
+      padding-bottom: 2.5rem !important;
+    }
+
+    /* 2. Hero Section */
+    h1.max-w-6xl {
+      font-size: 42px !important;
+      line-height: 1.08 !important;
+    }
+    .w-full.max-w-\[1400px\] img {
+      max-height: 46vh !important;
+    }
+
+    /* 3. Fast-Track Appointment / Quote Card - Compact Sleek Laptop Fit */
+    #quote .max-w-5xl {
+      max-width: 780px !important;
+    }
+    #quote h2 span:first-child {
+      font-size: 38px !important;
+    }
+    #quote h2 span:last-child {
+      font-size: 40px !important;
+    }
+    #quote .bg-\[\#2B2927\].rounded-\[10px\] {
+      padding: 1.25rem 1.75rem !important;
+    }
+    #quote #stepProgressContainer {
+      margin-left: -1.75rem !important;
+      margin-right: -1.75rem !important;
+      margin-top: -1.25rem !important;
+      padding-left: 1.75rem !important;
+      padding-right: 1.75rem !important;
+      padding-top: 0.75rem !important;
+      margin-bottom: 1.25rem !important;
+      font-size: 11px !important;
+    }
+    #quote #stepProgressContainer button {
+      padding-bottom: 0.75rem !important;
+      font-size: 11px !important;
+    }
+    #quote label.cursor-pointer {
+      padding: 0.65rem 0.85rem !important;
+    }
+    #quote label.cursor-pointer span.font-bold {
+      font-size: 12px !important;
+    }
+    #quote label.cursor-pointer span.text-xs {
+      font-size: 10px !important;
+      line-height: 1.3 !important;
+    }
+    #quote #btnStep1Next, #quote button[type="submit"] {
+      padding-top: 0.65rem !important;
+      padding-bottom: 0.65rem !important;
+      font-size: 12px !important;
+    }
+    #quote .shadow-\[0_16px_40px_-10px_rgba\(0\,0\,0\,0\.7\)\] {
+      padding: 0.75rem 1.25rem !important;
+    }
+    #quote .grid.grid-cols-1.sm\:grid-cols-3 {
+      gap: 0.5rem !important;
+      margin-top: 0.75rem !important;
+    }
+    #quote .grid.grid-cols-1.sm\:grid-cols-3 > div {
+      padding: 0.5rem 0.75rem !important;
+      font-size: 10.5px !important;
+    }
+
+    /* 4. Customer Reviews - Sleek Compact Cards on Laptop */
+    #reviews .marquee-track-left > div,
+    #reviews .marquee-track-right > div {
+      width: 280px !important;
+      min-height: 180px !important;
+      padding: 1.15rem 1.25rem !important;
+    }
+    #reviews .marquee-track-left > div .flex.items-center.gap-2.mb-4,
+    #reviews .marquee-track-right > div .flex.items-center.gap-2.mb-4 {
+      margin-bottom: 0.5rem !important;
+    }
+    #reviews .marquee-track-left > div p,
+    #reviews .marquee-track-right > div p {
+      font-size: 12px !important;
+      line-height: 1.45 !important;
+      margin-bottom: 0.5rem !important;
+    }
+
+    /* 5. Repairs Section Cards */
+    #repairs h2 {
+      font-size: 42px !important;
+    }
+    #repairs .hidden.md\:grid > div > div:last-child {
+      padding: 1.25rem 1.25rem 1.5rem 1.25rem !important;
+    }
+    #repairs .hidden.md\:grid h3 {
+      font-size: 19px !important;
+      margin-bottom: 0.35rem !important;
+    }
+    #repairs .hidden.md\:grid p {
+      font-size: 11.5px !important;
+      line-height: 1.4 !important;
+      margin-bottom: 0.75rem !important;
+    }
+    #repairs .hidden.md\:grid a {
+      padding: 0.6rem 1rem !important;
+      font-size: 11px !important;
+    }
+
+    /* 6. Why Choose & Craftsmanship Columns */
+    #why-choose .aspect-square,
+    #craftsmanship .aspect-square {
+      max-width: 300px !important;
+    }
+    #why-choose h2,
+    #craftsmanship h2 {
+      font-size: 34px !important;
+      margin-bottom: 1rem !important;
+    }
+    #why-choose .space-y-4,
+    #craftsmanship .space-y-4 {
+      gap: 0.6rem !important;
+    }
+    #why-choose p,
+    #craftsmanship p {
+      font-size: 12.5px !important;
+      line-height: 1.45 !important;
+    }
+
+    /* 7. Gallery Case Sliders */
+    #gallery h2 {
+      font-size: 44px !important;
+    }
+    #gallery .max-w-\[880px\] {
+      max-width: 660px !important;
+    }
+    #gallery .comparison-slider-container {
+      max-height: 330px !important;
+    }
+    #gallery .flex.flex-col.space-y-12 {
+      gap: 2rem !important;
+    }
+
+    /* 8. FAQ Section */
+    #faq .max-w-4xl {
+      max-width: 760px !important;
+    }
+    #faq .text-center.mb-12 {
+      margin-bottom: 2rem !important;
+    }
+    #faq h2 {
+      font-size: 38px !important;
+    }
+  }
+
   </style>
 
   <!-- Tailwind CSS CDN -->
